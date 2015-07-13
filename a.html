@@ -30,7 +30,47 @@
 			margin: 0;
 		}
 		.item {
-			max-width: 50%;
+			display: inline-block;
+			min-width: 220px;
+		    max-width: 230px;
+		    /*padding: 0 10px;*/
+		}
+		/*.item:nth-child(odd) {
+			padding-right: 10px;
+		}
+		.item:nth-child(even) {
+			padding-left: 10px;
+			border-left: 1px solid #cccccc;
+		}*/
+		/*.item:nth-child(n+5) table {
+			border-bottom: 0;
+		}
+		.item table {
+			border-bottom: 1px solid #cccccc;
+		}*/
+		.item a {
+			color: #111111;
+			font-weight: normal;
+			text-decoration: none;
+		}
+		.item td {
+			height: 210px;
+		}
+		.item img {
+			max-width: 150px;
+		}
+		.bg img {
+			max-width: 100%;
+		}
+		.bg {
+			padding: 0 5px 10px;
+		}
+		.bg td {
+			border: 1px solid #cccccc;
+		}
+		.bg span {
+			display: block;
+			padding: 10px;
 		}
 		td { -webkit-text-size-adjust:none; -webkit-tap-highlight-color: rgba(0,0,0,0); margin: 0; padding: 0; border: 0; }
 		#ForceOutlook2010BrowserLink span { padding:0px; }
@@ -64,6 +104,16 @@
 			color: #777777;
 			font-size: 17px;
 		}
+		.caps {
+			font-size: 19.5px;
+			letter-spacing: 2.5px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		.serif {
+			font-family: Georgia, serif;
+			font-size: 21px;
+		}
 		/*.warn {
 			background: #FFFED1;
 			display: inline-block;
@@ -88,6 +138,9 @@
 			text-decoration: none;
 			text-transform: uppercase;
 			mso-hide: all;
+		}
+		.btn.w {
+			padding: 15px 75px;
 		}
 		/*.btn:active {
 			background: #2a2a2a;
@@ -182,7 +235,8 @@
 				<tr>
 					<td class="content">
 						<!-- drop logo -->
-						<a href="###"><img src="img/the-drop.gif" alt="alt text here" /></a>
+						<span class="h3 caps">The Collection</span>
+						<a href="###"><img src="img/the-collection.gif" alt="alt text here" /></a>
 						<!--\ drop logo -->
 						<!-- drop copy -->
 						<table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -200,11 +254,179 @@
 							</tr>
 						</table>
 						<!--\ drop copy -->
-						
 
-						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="50" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-						<table width="80%" style="margin:auto" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;" bgcolor="#cccccc">&nbsp;</td></tr></table>
-						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+						<span class="center">
+							
+							<!-- item -->
+							<div class="item">
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td>
+											<a href="###"><img src="img/lv-bag.jpg" alt="alt text here" /></a>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<!--\ item -->
+							<!-- item -->
+							<div class="item">
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td>
+											<a href="###"><img src="img/sunnies.jpg" alt="alt text here" /></a>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<!--\ item -->
+							<!-- item -->
+							<div class="item">
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td>
+											<a href="###"><img src="img/lv-bag1.jpg" alt="alt text here" /></a>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<!--\ item -->
+							<!-- item -->
+							<div class="item">
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td>
+											<a href="###"><img src="img/lv-bag.jpg" alt="alt text here" /></a>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<!--\ item -->
+
+							<!-- item -->
+							<div class="item">
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td>
+											<a href="###"><img src="img/lv-bag.jpg" alt="alt text here" /></a>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<!--\ item -->
+							<!-- item -->
+							<div class="item">
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td>
+											<a href="###"><img src="img/sunnies.jpg" alt="alt text here" /></a>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<!--\ item -->
+
+							<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="25" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+							<a href="###" class="btn w">Shop Now</a>
+
+							<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="50" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+							<span class="h3 serif">Featured Trends</span>
+
+							<!-- item -->
+							<div class="item bg">
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td>
+											<a href="###">
+												<img src="img/rare-bags.jpg" alt="alt text here" />
+												<span>Rare &amp; Vintage Bags</span>
+											</a>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<!--\ item -->
+
+							<!-- item -->
+							<div class="item bg">
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td>
+											<a href="###">
+												<img src="img/shoes.jpg" alt="alt text here" />
+												<span>Totes &amp; Travel Bags</span>
+											</a>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<!--\ item -->
+
+							<!-- item -->
+							<div class="item bg">
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td>
+											<a href="###">
+												<img src="img/bags.jpg" alt="alt text here" />
+												<span>Unique &amp; Surprising Shoes</span>
+											</a>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<!--\ item -->
+
+							<!-- item -->
+							<div class="item bg">
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td>
+											<a href="###">
+												<img src="img/wedding.jpg" alt="alt text here" />
+												<span>Weddings</span>
+											</a>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<!--\ item -->
+
+							<!-- item -->
+							<div class="item bg">
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td>
+											<a href="###">
+												<img src="http://cdn1.notonthehighstreet.com/system/product_images/images/001/578/355/preview_personalised-men-s-laptop-satchel-bag.jpg" alt="alt text here" />
+												<span>Clutches</span>
+											</a>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<!--\ item -->
+
+							<!-- item -->
+							<div class="item bg">
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td>
+											<a href="###">
+												<img src="http://cdn1.notonthehighstreet.com/system/product_images/images/001/578/355/preview_personalised-men-s-laptop-satchel-bag.jpg" alt="alt text here" />
+												<span>Sunglasses</span>
+											</a>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<!--\ item -->
+
+						</span>
+
+						<!-- <table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+						<table width="80%" style="margin:auto" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;" bgcolor="#cccccc">&nbsp;</td></tr></table> -->
+						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
 						<!-- nav category links -->
 						<table width="100%" cellpadding="0" cellspacing="0" class="links">
