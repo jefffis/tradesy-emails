@@ -63,15 +63,18 @@
 			max-width: 100%;
 		}
 		.bg {
-			max-width: 298px;
+			max-width: 270px;
 			padding: 10px;
 		}
-		.bg td {
+		.bg td[align=center] {
 			border: 1px solid #cccccc;
 		}
-		.bg span {
-			display: block;
-			padding: 10px;
+		.bg .span {
+			/*display: block;
+			padding: 10px;*/
+			height: 40px;
+			border: 0;
+			text-align: center;
 		}
 		td { -webkit-text-size-adjust:none; -webkit-tap-highlight-color: rgba(0,0,0,0); margin: 0; padding: 0; border: 0; }
 		#ForceOutlook2010BrowserLink span { padding:0px; }
@@ -93,7 +96,7 @@
 			display: block;
 			font-size: 24px;
 			line-height: 1.2;
-			margin-bottom: 10px;
+			/*margin-bottom: 10px;*/
 		}
 		.h2 {
 			font-size: 17px;
@@ -140,8 +143,18 @@
 			text-transform: uppercase;
 			mso-hide: all;
 		}
-		.btn.w {
+		.btn-w {
+			background: #ffffff;
+			border: 2px solid #111111;
+			color: #111111;
+			display: inline-block;
+			font-size: 17px;
+			/*font-weight: bold;*/
+			letter-spacing: 1.5px;
 			padding: 15px 75px;
+			text-decoration: none;
+			text-transform: uppercase;
+			mso-hide: all;
 		}
 		/*.btn:active {
 			background: #2a2a2a;
@@ -155,11 +168,14 @@
 			margin: auto;*/
 			text-align: center;
 		}
+		.links td {
+			height: 30px;
+		}
 		.links a {
 			color: #111111;
 			display: block;
 			letter-spacing: 1.5px;
-			padding: 15px;
+			/*padding: 15px;*/
 			text-align: center;
 			text-decoration: none;
 			text-transform: uppercase;
@@ -217,12 +233,12 @@
 				<tr>
 					<td width="10"></td>
 					<td align="left">
-						<a href="https://www.tradesy.com/"><img src="img/email-logo.gif" alt="Tradesy: buy &amp; sell clothes online" height="17" class="logo" border="0" /></a>
+						<a href="https://www.tradesy.com/"><img src="http://wtf.jefff.co/tradesy-emails/img/email-logo.gif" alt="Tradesy: buy &amp; sell clothes online" height="17" class="logo" border="0" /></a>
 					</td>
 					<td class="content h" align="right">
-						<a href="###">Shop</a>
+						<a href="###"><font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Shop</font></a>
 						&nbsp;&nbsp;&nbsp;
-						<a href="###">Sell</a>
+						<a href="###"><font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Sell</font></a>
 					</td>
 					<td width="10"></td>
 				</tr>
@@ -234,22 +250,28 @@
 
 			<table width="100%" cellpadding="0" cellspacing="0" border="0">
 				<tr>
-					<td class="content">
+					<td class="content" align="center">
 						<!-- drop logo -->
-						<span class="h3 caps">The Collection</span>
-						<a href="###"><img src="img/the-collection.gif" alt="alt text here" /></a>
+						<span class="h3 caps"><font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">The Collection</font></span>
+						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="1"></td></tr></table>
+						<a href="###"><img src="http://wtf.jefff.co/tradesy-emails/img/the-collection.gif" alt="alt text here" /></a>
 						<!--\ drop logo -->
 						<!-- drop copy -->
 						<table width="100%" cellpadding="0" cellspacing="0" border="0">
 							<tr>
 								<td height="15"></td>
 							</tr>
-							<td>
+							<tr>
 								<td class="content h3" align="center">
-									<!-- Prices slashed until midnight&hellip; -->
-									<a href="###" class="btn">Shop Now</a>
+									<!--[if mso]>
+									<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" id="outlook-button-url" href="" arcsize="0%" strokecolor="#111111" fillcolor="#ffffff" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);height:40px;v-text-anchor:middle;width:300px;" >
+									<w:anchorlock style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);" />
+									<center style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);color:#111111;font-size:17px; text-transform: uppercase; letter-spacing: 1.5px;"><font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif" id="outlook-button-copy">Shop Now</font></center>
+									</v:roundrect>
+									<![endif]-->
+									<a href="###" class="btn"><font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Shop Now</font></a>
 								</td>
-							</td>
+							</tr>
 							<tr>
 								<td height="15"></td>
 							</tr>
@@ -257,198 +279,309 @@
 						<!--\ drop copy -->
 
 						<span class="center">
+
+							<!--[if (gte mso 9)|(IE)]><table width="480" cellpadding="0" cellspacing="0" align="center"><tr><td align="center"><![endif]-->
 							
 							<!-- item -->
 							<div class="item">
+								<!--[if (gte mso 9)|(IE)]><table width="230" cellpadding="0" cellspacing="0" align="left"><tr><td><![endif]-->
 								<table width="100%" cellpadding="0" cellspacing="0">
 									<tr>
-										<td>
-											<a href="###"><img src="img/lv-bag.jpg" alt="alt text here" /></a>
+										<td align="center">
+											<a href="###"><img src="http://wtf.jefff.co/tradesy-emails/img/lv-bag.jpg" alt="alt text here" width="150" /></a>
 										</td>
 									</tr>
 								</table>
-							</div>
-							<!--\ item -->
-							<!-- item -->
-							<div class="item">
-								<table width="100%" cellpadding="0" cellspacing="0">
-									<tr>
-										<td>
-											<a href="###"><img src="img/sunnies.jpg" alt="alt text here" /></a>
-										</td>
-									</tr>
-								</table>
-							</div>
-							<!--\ item -->
-							<!-- item -->
-							<div class="item">
-								<table width="100%" cellpadding="0" cellspacing="0">
-									<tr>
-										<td>
-											<a href="###"><img src="img/lv-bag1.jpg" alt="alt text here" /></a>
-										</td>
-									</tr>
-								</table>
-							</div>
-							<!--\ item -->
-							<!-- item -->
-							<div class="item">
-								<table width="100%" cellpadding="0" cellspacing="0">
-									<tr>
-										<td>
-											<a href="###"><img src="img/lv-bag.jpg" alt="alt text here" /></a>
-										</td>
-									</tr>
-								</table>
+								<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
 							</div>
 							<!--\ item -->
 
 							<!-- item -->
 							<div class="item">
+								<!--[if (gte mso 9)|(IE)]><table width="230" cellpadding="0" cellspacing="0" align="right"><tr><td><![endif]-->
 								<table width="100%" cellpadding="0" cellspacing="0">
 									<tr>
-										<td>
-											<a href="###"><img src="img/lv-bag.jpg" alt="alt text here" /></a>
+										<td align="center">
+											<a href="###"><img src="http://wtf.jefff.co/tradesy-emails/img/lv-bag.jpg" alt="alt text here" width="150" /></a>
 										</td>
 									</tr>
 								</table>
-							</div>
-							<!--\ item -->
-							<!-- item -->
-							<div class="item">
-								<table width="100%" cellpadding="0" cellspacing="0">
-									<tr>
-										<td>
-											<a href="###"><img src="img/sunnies.jpg" alt="alt text here" /></a>
-										</td>
-									</tr>
-								</table>
+								<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
 							</div>
 							<!--\ item -->
 
-							<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="25" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-							<a href="###" class="btn w">Shop Now</a>
+							<!-- item -->
+							<div class="item">
+								<!--[if (gte mso 9)|(IE)]><table width="230" cellpadding="0" cellspacing="0" align="left"><tr><td><![endif]-->
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td align="center">
+											<a href="###"><img src="http://wtf.jefff.co/tradesy-emails/img/lv-bag.jpg" alt="alt text here" width="150" /></a>
+										</td>
+									</tr>
+								</table>
+								<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+							</div>
+							<!--\ item -->
+
+							<!-- item -->
+							<div class="item">
+								<!--[if (gte mso 9)|(IE)]><table width="230" cellpadding="0" cellspacing="0" align="right"><tr><td><![endif]-->
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td align="center">
+											<a href="###"><img src="http://wtf.jefff.co/tradesy-emails/img/lv-bag.jpg" alt="alt text here" width="150" /></a>
+										</td>
+									</tr>
+								</table>
+								<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+							</div>
+							<!--\ item -->
+
+							<!-- item -->
+							<div class="item">
+								<!--[if (gte mso 9)|(IE)]><table width="230" cellpadding="0" cellspacing="0" align="left"><tr><td><![endif]-->
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td align="center">
+											<a href="###"><img src="http://wtf.jefff.co/tradesy-emails/img/lv-bag.jpg" alt="alt text here" width="150" /></a>
+										</td>
+									</tr>
+								</table>
+								<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+							</div>
+							<!--\ item -->
+
+							<!-- item -->
+							<div class="item">
+								<!--[if (gte mso 9)|(IE)]><table width="230" cellpadding="0" cellspacing="0" align="right"><tr><td><![endif]-->
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td align="center">
+											<a href="###"><img src="http://wtf.jefff.co/tradesy-emails/img/lv-bag.jpg" alt="alt text here" width="150" /></a>
+										</td>
+									</tr>
+								</table>
+								<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+							</div>
+							<!--\ item -->
+
+							<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->						
+
+							<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+							<!--[if mso]>
+							<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" id="outlook-button-url" href="" arcsize="0%" strokecolor="#111111" fillcolor="#ffffff" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);height:40px;v-text-anchor:middle;width:300px;" >
+							<w:anchorlock style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);" />
+							<center style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);color:#111111;font-size:17px; text-transform: uppercase; letter-spacing: 1.5px;"><font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif" id="outlook-button-copy">Shop Now</font></center>
+							</v:roundrect>
+							<![endif]-->
+							<a href="###" class="btn-w"><font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Shop Now</font></a>
 
 							<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="50" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
+						</span>
+
+					</td>
+				</tr>
+			</table>
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td class="content" align="center">
+
+						<span class="center">
+
 							<span class="h3 serif">Featured Trends</span>
+							<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
 							<!-- item -->
 							<div class="item bg">
+								<!--[if (gte mso 9)|(IE)]><table width="278" cellpadding="0" cellspacing="0" align="left"><tr><td><![endif]-->
 								<table width="100%" cellpadding="0" cellspacing="0">
 									<tr>
-										<td>
+										<td align="center">
 											<a href="###">
-												<img src="img/rare-bags.jpg" alt="alt text here" />
-												<span>Rare &amp; Vintage Bags</span>
+												<img src="http://wtf.jefff.co/tradesy-emails/img/rare-bags.jpg" alt="alt text here" width="276" />
+												<table width="100%" cellpadding="0" cellspacing="0">
+													<tr>
+														<td class="span">
+															<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Rare &amp; Vintage Bags</font>
+														</td>
+													</tr>
+												</table>
 											</a>
 										</td>
 									</tr>
 								</table>
+								<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
 							</div>
 							<!--\ item -->
 
 							<!-- item -->
 							<div class="item bg">
+								<!--[if (gte mso 9)|(IE)]><table width="278" cellpadding="0" cellspacing="0" align="right"><tr><td><![endif]-->
 								<table width="100%" cellpadding="0" cellspacing="0">
 									<tr>
-										<td>
+										<td align="center">
 											<a href="###">
-												<img src="img/shoes.jpg" alt="alt text here" />
-												<span>Totes &amp; Travel Bags</span>
+												<img src="http://wtf.jefff.co/tradesy-emails/img/rare-bags.jpg" alt="alt text here" width="276" />
+												<table width="100%" cellpadding="0" cellspacing="0">
+													<tr>
+														<td class="span">
+															<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Rare &amp; Vintage Bags</font>
+														</td>
+													</tr>
+												</table>
 											</a>
 										</td>
 									</tr>
 								</table>
-							</div>
-							<!--\ item -->
-
-							<!-- item -->
-							<div class="item bg">
-								<table width="100%" cellpadding="0" cellspacing="0">
-									<tr>
-										<td>
-											<a href="###">
-												<img src="img/bags.jpg" alt="alt text here" />
-												<span>Unique &amp; Surprising Shoes</span>
-											</a>
-										</td>
-									</tr>
-								</table>
-							</div>
-							<!--\ item -->
-
-							<!-- item -->
-							<div class="item bg">
-								<table width="100%" cellpadding="0" cellspacing="0">
-									<tr>
-										<td>
-											<a href="###">
-												<img src="img/wedding.jpg" alt="alt text here" />
-												<span>Weddings</span>
-											</a>
-										</td>
-									</tr>
-								</table>
-							</div>
-							<!--\ item -->
-
-							<!-- item -->
-							<div class="item bg">
-								<table width="100%" cellpadding="0" cellspacing="0">
-									<tr>
-										<td>
-											<a href="###">
-												<img src="http://cdn1.notonthehighstreet.com/system/product_images/images/001/578/355/preview_personalised-men-s-laptop-satchel-bag.jpg" alt="alt text here" />
-												<span>Clutches</span>
-											</a>
-										</td>
-									</tr>
-								</table>
-							</div>
-							<!--\ item -->
-
-							<!-- item -->
-							<div class="item bg">
-								<table width="100%" cellpadding="0" cellspacing="0">
-									<tr>
-										<td>
-											<a href="###">
-												<img src="http://cdn1.notonthehighstreet.com/system/product_images/images/001/578/355/preview_personalised-men-s-laptop-satchel-bag.jpg" alt="alt text here" />
-												<span>Sunglasses</span>
-											</a>
-										</td>
-									</tr>
-								</table>
+								<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
 							</div>
 							<!--\ item -->
 
 						</span>
 
-						<!-- <table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-						<table width="90%" style="margin:auto" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;" bgcolor="#cccccc">&nbsp;</td></tr></table> -->
+					</td>
+				</tr>
+			</table>
+
+			<!--[if (gte mso 9)|(IE)]><table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table><![endif]-->
+
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td class="content" align="center">
+
+						<span class="center">
+
+							<!-- item -->
+							<div class="item bg">
+								<!--[if (gte mso 9)|(IE)]><table width="278" cellpadding="0" cellspacing="0" align="left"><tr><td><![endif]-->
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td align="center">
+											<a href="###">
+												<img src="http://wtf.jefff.co/tradesy-emails/img/rare-bags.jpg" alt="alt text here" width="276" />
+												<table width="100%" cellpadding="0" cellspacing="0">
+													<tr>
+														<td class="span">
+															<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Rare &amp; Vintage Bags</font>
+														</td>
+													</tr>
+												</table>
+											</a>
+										</td>
+									</tr>
+								</table>
+								<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+							</div>
+							<!--\ item -->
+
+							<!-- item -->
+							<div class="item bg">
+								<!--[if (gte mso 9)|(IE)]><table width="278" cellpadding="0" cellspacing="0" align="right"><tr><td><![endif]-->
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td align="center">
+											<a href="###">
+												<img src="http://wtf.jefff.co/tradesy-emails/img/rare-bags.jpg" alt="alt text here" width="276" />
+												<table width="100%" cellpadding="0" cellspacing="0">
+													<tr>
+														<td class="span">
+															<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Rare &amp; Vintage Bags</font>
+														</td>
+													</tr>
+												</table>
+											</a>
+										</td>
+									</tr>
+								</table>
+								<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+							</div>
+							<!--\ item -->
+
+						</span>
+
+					</td>
+				</tr>
+			</table>
+
+			<!--[if (gte mso 9)|(IE)]><table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table><![endif]-->
+
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td class="content" align="center">
+
+						<span class="center">
+
+							<!-- item -->
+							<div class="item bg">
+								<!--[if (gte mso 9)|(IE)]><table width="278" cellpadding="0" cellspacing="0" align="left"><tr><td><![endif]-->
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td align="center">
+											<a href="###">
+												<img src="http://wtf.jefff.co/tradesy-emails/img/rare-bags.jpg" alt="alt text here" width="276" />
+												<table width="100%" cellpadding="0" cellspacing="0">
+													<tr>
+														<td class="span">
+															<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Rare &amp; Vintage Bags</font>
+														</td>
+													</tr>
+												</table>
+											</a>
+										</td>
+									</tr>
+								</table>
+								<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+							</div>
+							<!--\ item -->
+
+							<!-- item -->
+							<div class="item bg">
+								<!--[if (gte mso 9)|(IE)]><table width="278" cellpadding="0" cellspacing="0" align="right"><tr><td><![endif]-->
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td align="center">
+											<a href="###">
+												<img src="http://wtf.jefff.co/tradesy-emails/img/rare-bags.jpg" alt="alt text here" width="276" />
+												<table width="100%" cellpadding="0" cellspacing="0">
+													<tr>
+														<td class="span">
+															<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Rare &amp; Vintage Bags</font>
+														</td>
+													</tr>
+												</table>
+											</a>
+										</td>
+									</tr>
+								</table>
+								<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+							</div>
+							<!--\ item -->
+
+						</span>
+
+					</td>
+				</tr>
+			</table>
+
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td class="content" align="center">
+
 						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+						<!--[if (gte mso 9)|(IE)]><table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table><![endif]-->
 
 						<!-- nav category links -->
 						<table width="100%" cellpadding="0" cellspacing="0" class="links">
 							<tr>
 								<td>
-									<a href="###">Bags</a>
+									<a href="###"><font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Bags</font></a>
 								</td>
 								<td>
-									<a href="###">Clothing</a>
-								</td>
-							</tr>
-							<tr>
-								<td height="10"></td>
-								<td height="10"></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="###">Shoes</a>
-								</td>
-								<td>
-									<a href="###">Accessories</a>
+									<a href="###"><font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Clothing</font></a>
 								</td>
 							</tr>
 							<tr>
@@ -457,10 +590,22 @@
 							</tr>
 							<tr>
 								<td>
-									<a href="###">Weddings</a>
+									<a href="###"><font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Shoes</font></a>
 								</td>
 								<td>
-									<a href="###">Designers</a>
+									<a href="###"><font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Accessories</font></a>
+								</td>
+							</tr>
+							<tr>
+								<td height="10"></td>
+								<td height="10"></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="###"><font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Weddings</font></a>
+								</td>
+								<td>
+									<a href="###"><font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Designers</font></a>
 								</td>
 							</tr>
 						</table>
@@ -474,7 +619,7 @@
 						<table width="100%" cellpadding="0" cellspacing="0" class="links">
 							<tr>
 								<td>
-									<a href="###">Sell Now &amp; Earn Cash</a>
+									<a href="###"><font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Sell Now &amp; Earn Cash</font></a>
 								</td>
 							</tr>
 						</table>
@@ -491,11 +636,13 @@
 										<tr>
 											<td width="20"></td>
 											<td class="content" align="center">
-												Questions? Contact us anytime at <a href="tel:13109127966" class="tel"><u>(310) 912-7966</u></a>, or <a href="mailto:team@tradesy.com">team@tradesy.com</a>.
-												<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="15"></td></tr></table>
-												This message was sent to you by <a href="https://www.tradesy.com/">Tradesy.com</a>. 1217 2nd Street FL 3, Santa Monica, CA 90401
-												<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="15"></td></tr></table>
-												Want to stop receiving these emails? <a href="[[UnsubscribeLink]]">Unsubscribe</a>
+												<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
+													Questions? Contact us anytime at <a href="tel:13109127966" class="tel"><u>(310) 912-7966</u></a>, or <a href="mailto:team@tradesy.com">team@tradesy.com</a>.
+													<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="15"></td></tr></table>
+													This message was sent to you by <a href="https://www.tradesy.com/">Tradesy.com</a>. 1217 2nd Street FL 3, Santa Monica, CA 90401
+													<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="15"></td></tr></table>
+													Want to stop receiving these emails? <a href="[[UnsubscribeLink]]">Unsubscribe</a>
+												</font>
 											</td>
 											<td width="20"></td>
 										</tr>
