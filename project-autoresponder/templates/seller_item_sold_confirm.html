@@ -34,6 +34,12 @@
 			margin: 0;
 		}
 		td { -webkit-text-size-adjust:none; -webkit-tap-highlight-color: rgba(0,0,0,0); margin: 0; padding: 0; border: 0; }
+		.pad {
+			width: 10px;
+		}
+		.pad-h {
+			height: 10px;
+		}
 		#ForceOutlook2010BrowserLink span { padding:0px; }
 		.ibk {
 			display: inline-block;
@@ -86,7 +92,7 @@
 			font-family: Georgia, serif;
 			font-size: 21px;
 		}
-		a {
+		a, .red {
 			color: #ee7873;
 		}
 		.blk {
@@ -113,7 +119,7 @@
 			display: inline-block;
 			font-size: 17px;
 			letter-spacing: 1.5px;
-			padding: 15px 30px;
+			padding: 15px;
 			text-decoration: none;
 			text-transform: uppercase;
 			mso-hide: all;
@@ -153,7 +159,7 @@
 		.action td {
 			background: #f3f3f3;
 		}
-		@media screen and (max-width: 600px) {
+		/*@media screen and (max-width: 600px) {
 			.hide {
 				display: none !important;
 			}
@@ -164,7 +170,7 @@
 			.h1.center {
 				text-align: left !important;
 			}
-		}
+		}*/
 		</style>
 	</head>
 	<body marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" offset="0">
@@ -177,12 +183,12 @@
 
 		<table style="margin:auto; max-width:600px;" id="wrapper" cellpadding="0" cellspacing="0">
 			<tr>
-				<td class="hide" height="20" width="20"></td>
-				<td class="hide" height="20"></td>
-				<td class="hide" height="20" width="20"></td>
+				<td class="hide pad pad-h"></td>
+				<td class="hide pad-h"></td>
+				<td class="hide pad pad-h"></td>
 			</tr>
 			<tr>
-				<td class="hide" width="20"></td>
+				<td class="hide pad"></td>
 				<td>
 
 					<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
@@ -224,8 +230,8 @@
 												<tr>
 													<td width="15"></td>
 													<td align="center">
-														<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif" class="caps">
-															You must confirm this sale by <a href="">[date]</a>
+														<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
+															Confirm this sale by <b class="red">[date]</b>
 														</font>
 													</td>
 													<td width="15"></td>
@@ -282,15 +288,15 @@
 															Congrats, you&rsquo;ll earn
 															<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 															<span class="h2">$[money]</span>
-															<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+															<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 															after you confirm &amp; ship your item.
-															<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+															<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 															<span class="ibk">
 																Order #: [num]
 															</span>
 															&nbsp;&nbsp;
 															<span class="ibk">
-																Status: <a href="" class="caps">Unconfirmed</a>
+																Status: <b class="red">Unconfirmed</b>
 															</span>
 														</font>
 
@@ -393,12 +399,12 @@
 					</table>
 
 				</td>
-				<td class="hide" width="20"></td>
+				<td class="hide pad"></td>
 			</tr>
 			<tr>
-				<td class="hide" height="20" width="20"></td>
-				<td class="hide" height="20"></td>
-				<td class="hide" height="20" width="20"></td>
+				<td class="hide pad pad-h"></td>
+				<td class="hide pad-h"></td>
+				<td class="hide pad pad-h"></td>
 			</tr>
 		</table>
 
