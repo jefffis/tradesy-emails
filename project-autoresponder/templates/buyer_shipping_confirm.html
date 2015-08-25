@@ -48,6 +48,10 @@
 			font-size: 15px;
 			line-height: 22px;
 		}
+		.sm {
+			font-size: 13px;
+			line-height: 18px;
+		}
 		del {
 			color: #999999;
 		}
@@ -112,6 +116,9 @@
 			background: #111111;
 			height: 50px;
 		}
+		.btn-col.red {
+			background: #ee7873;
+		}
 		.btn-col a {
 			font-size: 17px;
 			font-weight: normal;
@@ -154,6 +161,13 @@
 		}
 		.action td {
 			background: #f3f3f3;
+		}
+		.item {
+			display: inline-block;
+			max-width: 120px;
+		}
+		.item img {
+			width: 80px;
 		}
 		@media screen and (max-width: 600px) {
 			.hide {
@@ -225,17 +239,41 @@
 												</tr>
 											</table>
 
-											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="40" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											Lost passwords happen to the best of us. But fear not, we&rsquo;ve got you covered.
+											Hi {first_name},
 
-											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											<a href="{resetURL}">Click here to reset your Tradesy password</a> for <a href="mailto:{email}" class="blk">{email}</a>.
+											Your order has shipped!
+
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+											<b>{item_name}</b> should arrive to your shipping address within 3 business days. You can track your order&rsquo;s status from <a href="http://www.tradesy.com/your-purchases"> Your Purchases</a>. Please note that orders over $500 require signature on delivery.
+
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+											Thanks for shopping on Tradesy! You didn&rsquo;t just get a great deal -- you also supported the growth of the Tradesy community, which is pretty cool (at least we think so). Have questions or feedback? You can contact us anytime at (310) 912-7966, or <a href="mailto:team@tradesy.com">team@tradesy.com</a>
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="40" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
 											<b>Team Tradesy</b>
+
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+											<table width="100%" cellspacing="0" cellpadding="0">
+												<tr>
+													<td align="center">
+														<table width="200" cellspacing="0" cellpadding="0">
+															<tr>
+																<td class="btn-col content" align="center">
+																	<a href="http://www.tradesy.com/your-purchases">View Order</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="40" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
@@ -243,7 +281,85 @@
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											Questions? Contact us anytime at <a href="tel:13109127966" class="blk">(310) 912-7966</a>, or <a href="mailto:team@tradesy.com" class="blk">team@tradesy.com</a>
+											<table width="100%" cellspacing="0" cellpadding="0">
+												<tr>
+													<td align="center" class="content">
+														
+														<span class="h2">Free Tradesy Credit</span>
+
+														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+														Get $10 for every friend who uses their $20 welcome offer.
+
+														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+														<div class="item">
+															<table width="100%" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td valign="top" class="content sm" align="center">
+																		<img src="img/invite.gif" alt="Invite your friends to Tradesy" />
+																		<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+																		<span class="h2">1.</span>
+																		<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+																		Invite all of your friends to join Tradesy today
+																	</td>
+																</tr>
+															</table>
+														</div>
+
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+														<div class="item">
+															<table width="100%" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td valign="top" class="content sm" align="center">
+																		<img src="img/item.gif" alt="Invite your friends to Tradesy" />
+																		<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+																		<span class="h2">2.</span>
+																		<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+																		Each friend gets $20 on their first $50 purchase
+																	</td>
+																</tr>
+															</table>
+														</div>
+
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+														<div class="item">
+															<table width="100%" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td valign="top" class="content sm" align="center">
+																		<img src="img/cash.gif" alt="Invite your friends to Tradesy" />
+																		<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+																		<span class="h2">3.</span>
+																		<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+																		Then you get $10 when they use your gift!
+																	</td>
+																</tr>
+															</table>
+														</div>
+
+														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+														<table width="100%" cellspacing="0" cellpadding="0">
+															<tr>
+																<td align="center">
+																	<table width="280" cellspacing="0" cellpadding="0">
+																		<tr>
+																			<td class="btn-col red content" align="center">
+																				<a href="http://www.tradesy.com/your-purchases">Invite Friends &amp; Get $$</a>
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+
+														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+													</td>
+												</tr>
+											</table>
 
 										</td>
 									</tr>
