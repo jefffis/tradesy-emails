@@ -6,11 +6,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>New message alert</title>
+		<title>An update from Tradesy</title>
 
 		<style>
-		@font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
-		@font-face{font-family:'proxima-nova-semi';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot?#iefix") format("embedded-opentype"),url("/css/fonts/proxima-nova/semi/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
 		html, body {
 			background: #f9f9f9;
 		}
@@ -34,10 +32,19 @@
 			margin: 0;
 		}
 		td { -webkit-text-size-adjust:none; -webkit-tap-highlight-color: rgba(0,0,0,0); margin: 0; padding: 0; border: 0; }
+		.pad {
+			width: 10px;
+		}
+		.pad-h {
+			height: 10px;
+		}
 		#ForceOutlook2010BrowserLink span { padding:0px; }
+		.ibk {
+			display: inline-block;
+		}
 		.content {
 			color: #111111;
-			font-family: 'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif;
+			font-family: 'Helvetica Neue', Arial, sans-serif;
 			font-size: 15px;
 			line-height: 22px;
 		}
@@ -59,7 +66,7 @@
 		.h1, .h2, .h3 {
 			color: #111111;
 			display: block;
-			font-family: 'proxima-nova-semi', 'Helvetica Neue', Arial, sans-serif;
+			font-weight: bold;
 			font-size: 24px;
 			line-height: 1.2;
 		}
@@ -74,8 +81,7 @@
 			font-size: 17px;
 		}
 		.caps {
-			font-size: 19.5px;
-			letter-spacing: 2.5px;
+			letter-spacing: 1.5px;
 			text-align: center;
 			text-transform: uppercase;
 		}
@@ -83,7 +89,7 @@
 			font-family: Georgia, serif;
 			font-size: 21px;
 		}
-		a {
+		a, .red {
 			color: #ee7873;
 		}
 		.blk {
@@ -93,24 +99,26 @@
 			color: #999999;
 		}
 		a, b {
-			font-family: 'proxima-nova-semi', 'Helvetica Neue', Arial, sans-serif;
-			font-weight: normal;
+			font-weight: bold;
+		}
+		.blk {
+			color: #111111;
 		}
 		.tel {
 			color: #111111;
 			text-decoration: none;
 		}
-		.btn {
+		.btn-col {
 			background: #111111;
-			/*border: 2px solid #111111;*/
-			color: #ffffff;
-			display: inline-block;
+			height: 50px;
+		}
+		.btn-col a {
 			font-size: 17px;
+			font-weight: normal;
+			color: #ffffff;
 			letter-spacing: 1.5px;
-			padding: 15px 30px;
 			text-decoration: none;
 			text-transform: uppercase;
-			mso-hide: all;
 		}
 		.center {
 			display: block;
@@ -124,7 +132,7 @@
 			border-radius: 100%;
 			border: 1px solid #111111;
 			color: #111111;
-			font-family: 'proxima-nova-semi', 'Helvetica Neue', Arial, sans-serif;
+			font-family: 'Helvetica Neue', Arial, sans-serif;
 			font-size: 24px;
 			letter-spacing: 1.5px;
 		}
@@ -134,7 +142,7 @@
 		.profile img {
 			border-radius: 100%;
 			color: #111111;
-			font-family: 'proxima-nova-semi', 'Helvetica Neue', Arial, sans-serif;
+			font-family: 'Helvetica Neue', Arial, sans-serif;
 			font-size: 24px;
 			letter-spacing: 1.5px;
 			margin: 0;
@@ -143,6 +151,9 @@
 		.item img {
 			max-height: 120px;
 			max-width: 120px;
+		}
+		.action td {
+			background: #f3f3f3;
 		}
 		@media screen and (max-width: 600px) {
 			.hide {
@@ -206,20 +217,19 @@
 									<tr>
 										<td class="content" align="left">
 
-											<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
-												November 12, 2014
-											</font>
+											{message_date}
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
+											{if item}
 											<!-- item -->
 											<table width="100%" cellspacing="0" cellpadding="0">
 												<tr>
-													<td align="center">
+													<td align="center" class="content">
 														
-														<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
-															<b>Message Regarding:</b>
-														</font>
+														
+														<b>Message Regarding:</b>
+														
 
 														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
@@ -235,7 +245,9 @@
 																		<tr>
 																			<td width="10"></td>
 																			<td class="item">
-																				<img src="https://item5.tradesy.com/r/031e99b9570aafceba6e197a750acf5a01e2d26644d3a4b5846bbadb447bedaf/355/355/bags/michael-kors/satchels/michael-kors-satchel-navy-logogold-4710814.jpg" alt="[item_name]" />
+																				<a href="{item_url}">
+																					<img src="{item_image}" alt="{item_name}" width="120" />
+																				</a>
 																			</td>
 																			<td width="10"></td>
 																		</tr>
@@ -251,36 +263,36 @@
 
 														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-														<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
-															<b>[item_name]</b>
-															<br />
-															<b>$[item_price]</b>
-															&nbsp;
-															<del>$[item_oldprice]</del>
-														</font>
+														
+														<b>{item_name}</b>
+														<br />
+														<b>${item_price}</b>
+														&nbsp;
+														<del>${item_retail_price}</del>
+														
 
 													</td>
 												</tr>
 											</table>
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+											{/if}
 
 											<!-- user profile / initials -->
-											<table width="100%" cellspacing="0" cellpadding="0">
+											<table width="75" align="center" cellspacing="0" cellpadding="0">
 												<tr>
-													<td height="75" width="75" class="profile img" align="center">
-														<!-- AK -->
-														<img src="https://pbs.twimg.com/profile_images/616687624284172288/-lSklU4H_400x400.jpg" alt="AK" />
+													<td height="75" width="75" class="profile" align="center">
+														{sender_initial}
 													</td>
 												</tr>
 											</table>
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											<span class="center">
-												<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
-													<b>Ashley wrote:</b>
-												</font>
+											<span class="center content">
+												
+												<b>{sender_name} wrote:</b>
+												
 											</span>
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
@@ -295,9 +307,13 @@
 												<tr>
 													<td width="20"></td>
 													<td class="content">
-														<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
-														I&rsquo;m feeling a little better but I'm at work and not in the best of moods; the cold air is making my teeth hurt worse soo Im just trying to get through the day but thank you for asking :-)
-														</font>
+														
+														{message}
+
+														{if censored_message == true}
+															<span class="red">Some content from this message was removed because it violates our <a href="http://help.tradesy.com/article/94-site-behavior" target="_blank">community guidelines</a>.</span>
+														{/if}
+														
 													</td>
 													<td width="20"></td>
 												</tr>
@@ -313,35 +329,38 @@
 											<table width="100%" cellspacing="0" cellpadding="0">
 												<tr>
 													<td align="center">
-														<!--[if mso]>
-														<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" id="outlook-button-url" href="" arcsize="0%" strokecolor="#111111" fillcolor="#111111" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);height:40px;v-text-anchor:middle;width:300px;" >
-														<w:anchorlock style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);" />
-														<center style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);color:#ffffff;font-size:17px; text-transform: uppercase; letter-spacing: 1.5px;"><font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif" id="outlook-button-copy">Reply from Inbox</font></center>
-														</v:roundrect>
-														<![endif]-->
-														<a href="" class="btn"><font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Reply from Inbox</font></a>
+														<table width="200" cellspacing="0" cellpadding="0">
+															<tr>
+																<td class="btn-col content" align="center">
+																	<a href="http://www.tradesy.com/inbox">Reply Now</a>
+																</td>
+															</tr>
+														</table>
 													</td>
 												</tr>
 											</table>
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											<span class="center">
-												<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">You can also respond to this message by directly replying to this email!</font>
+											<table width="100%" cellspacing="0" cellpadding="0">
+												<tr>
+													<td align="center" class="content">
+														
+														You can also respond to this message by directly replying to this email!
 												
-												<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-												<table width="100%" cellspacing="0" cellpadding="0">
-													<tr>
-														<td class="border">
-															<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
-															Respond in less than 24 hours to avoid losing sales!
-															</font>
-														</td>
-													</tr>
-												</table>
+														<table width="100%" cellspacing="0" cellpadding="0">
+															<tr>
+																<td align="center" class="border content">
+																	Respond in less than 24 hours to avoid losing sales!
+																</td>
+															</tr>
+														</table>
 
-											</span>
+													</td>
+												</tr>
+											</table>
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="40" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
@@ -349,9 +368,7 @@
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
-												Questions? Contact us anytime at <a href="" class="blk">(310) 912-7966</a>, or <a href="" class="blk">team@tradesy.com</a>
-											</font>
+											Questions? Contact us anytime at <a href="tel:13109127966" class="blk">(310) 912-7966</a>, or <a href="mailto:team@tradesy.com" class="blk">team@tradesy.com</a>
 
 										</td>
 									</tr>
@@ -372,40 +389,42 @@
 					<!-- footer -->
 					<table width="100%" cellpadding="0" cellspacing="0">
 						<tr>
+							<td width="20"></td>
 							<td class="content footer" align="center">
 
-								<a href="#"><img src="http://wtf.jefff.co/tradesy-emails/project-autoresponder/templates/img/facebook-icon.gif" alt="Like us on Facebook" /></a>
+								<a href="http://www.facebook.com/gotradesy"><img src="http://wtf.jefff.co/tradesy-emails/project-autoresponder/templates/img/facebook-icon.gif" alt="Like us on Facebook" /></a>
 								&nbsp;
-								<a href="#"><img src="http://wtf.jefff.co/tradesy-emails/project-autoresponder/templates/img/twitter-icon.gif" alt="Follow us on Twitter" /></a>
+								<a href="http://www.twitter.com/tradesy"><img src="http://wtf.jefff.co/tradesy-emails/project-autoresponder/templates/img/twitter-icon.gif" alt="Follow us on Twitter" /></a>
 								&nbsp;
-								<a href="#"><img src="http://wtf.jefff.co/tradesy-emails/project-autoresponder/templates/img/pinterest-icon.gif" alt="Follow us on Pinterest" /></a>
+								<a href="http://www.pinterest.com/tradesy"><img src="http://wtf.jefff.co/tradesy-emails/project-autoresponder/templates/img/pinterest-icon.gif" alt="Follow us on Pinterest" /></a>
 								&nbsp;
-								<a href="#"><img src="http://wtf.jefff.co/tradesy-emails/project-autoresponder/templates/img/instagram-icon.gif" alt="Follow us on Instagram" /></a>
+								<a href="https://instagram.com/tradesy"><img src="http://wtf.jefff.co/tradesy-emails/project-autoresponder/templates/img/instagram-icon.gif" alt="Follow us on Instagram" /></a>
 
 								<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-								<a href="#"><img src="http://wtf.jefff.co/tradesy-emails/project-autoresponder/templates/img/appstore.gif" class="appstore" alt="Find us in the App Store" /></a>
+								<a href="http://itunes.apple.com/us/app/tradesy-for-sellers/id569706824?mt=8"><img src="http://wtf.jefff.co/tradesy-emails/project-autoresponder/templates/img/appstore.gif" class="appstore" alt="Find us in the App Store" /></a>
 
 								<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-								<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
-									Having trouble viewing this email? <a href="">Click here</a>
+								
+								Having trouble viewing this email? <a href="{view_url}">Click here</a>
 
-									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+								<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-									This message was sent to you by Tradesy.com.
-									<br />
-									1217 2nd Street FL 3, Santa Monica, CA 90401
-									<br />
-									Call Us: (310) 912-7966
+								This message was sent to you by Tradesy.com.
+								<br />
+								1217 2nd Street FL 3, Santa Monica, CA 90401
+								<br />
+								Call Us: (310) 912-7966
 
-									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+								<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-									If you believe this has been sent to you in error, please safely <a href="">unsubscribe</a>.
-								</font>
+								If you believe this has been sent to you in error, please safely <a href="https://www.tradesy.com/email-preferences?h={profile.vars.email_hash}&v={profile.vars.hash_validator}">unsubscribe</a>.
+								
 
 								<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 							</td>
+							<td width="20"></td>
 						</tr>
 					</table>
 

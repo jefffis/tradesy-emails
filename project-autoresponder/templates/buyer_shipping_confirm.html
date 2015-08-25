@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>An update from Tradesy</title>
+		<title>Your order has shipped!</title>
 
 		<style>
 		html, body {
@@ -179,12 +179,12 @@
 
 		<table style="margin:auto; max-width:600px;" id="wrapper" cellpadding="0" cellspacing="0">
 			<tr>
-				<td class="hide pad pad-h"></td>
-				<td class="hide pad-h"></td>
-				<td class="hide pad pad-h"></td>
+				<td class="hide" height="20" width="20"></td>
+				<td class="hide" height="20"></td>
+				<td class="hide" height="20" width="20"></td>
 			</tr>
 			<tr>
-				<td class="hide pad"></td>
+				<td class="hide" width="20"></td>
 				<td>
 
 					<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
@@ -216,117 +216,26 @@
 								<table width="100%" cellpadding="0" cellspacing="0">
 									<tr>
 										<td class="content" align="left">
-
-											<table width="100%" cellspacing="0" cellpadding="0" class="action">
-												<tr>
-													<td height="5" width="15"></td>
-													<td height="5"></td>
-													<td height="5" width="15"></td>
-												</tr>
-												<tr>
-													<td width="15"></td>
-													<td align="center" class="content caps">
-														Confirm this sale by <b class="red">{confirm_date}</b>
-													</td>
-													<td width="15"></td>
-												</tr>
-												<tr>
-													<td height="5" width="15"></td>
-													<td height="5"></td>
-													<td height="5" width="15"></td>
-												</tr>
-											</table>
-
-											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-
-												<a href="" class="blk">{buyer_display_name}</a> purchased <a href="" class="blk">{item_name}</a>
-
-											<!-- item -->
-											<table width="100%" cellspacing="0" cellpadding="0">
+											
+											<table width="100%" cellpadding="0" cellspacing="0">
 												<tr>
 													<td align="center" class="content">
-
-														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-
-														<table width="150" cellspacing="0" cellpadding="0" align="center">
-															<tr>
-																<td class="border">
-																	<table width="100%" cellspacing="0" cellpadding="0">
-																		<tr>
-																			<td width="10" height="10"></td>
-																			<td height="10"></td>
-																			<td width="10" height="10"></td>
-																		</tr>
-																		<tr>
-																			<td width="10"></td>
-																			<td class="item">
-																				<img src="{item_image}" alt="{item_name}" width="120" />
-																			</td>
-																			<td width="10"></td>
-																		</tr>
-																		<tr>
-																			<td width="10" height="10"></td>
-																			<td height="10"></td>
-																			<td width="10" height="10"></td>
-																		</tr>
-																	</table>	
-																</td>
-															</tr>
-														</table>
-
-														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-
-														
-														Congrats, you&rsquo;ll earn
-														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-														<span class="h2">${earnings}</span>
-														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-														after you confirm &amp; ship your item.
-														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-														<span class="ibk">
-															Order #: {order_number}
-														</span>
-														&nbsp;&nbsp;
-														<span class="ibk">
-															Status: <b class="red">Unconfirmed</b>
-														</span>
-														
-
+														<span class="h1">Your Order Has Shipped!</span>
 													</td>
 												</tr>
 											</table>
 
-											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="35" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="40" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											<table width="100%" cellspacing="0" cellpadding="0">
-												<tr>
-													<td align="center">
-														<table width="200" cellspacing="0" cellpadding="0">
-															<tr>
-																<td class="btn-col content" align="center">
-																	<a href="{confirm_url}">Confirm Now</a>
-																</td>
-															</tr>
-														</table>
-													</td>
-												</tr>
-											</table>
+											Lost passwords happen to the best of us. But fear not, we&rsquo;ve got you covered.
 
-											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											<!--[if (gte mso 9)|(IE)]><table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center"><![endif]-->
+											<a href="{resetURL}">Click here to reset your Tradesy password</a> for <a href="mailto:{email}" class="blk">{email}</a>.
 
-											<span class="center content">
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="40" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-												or <a href="{cancel_url}" class="blk">Cancel Sale</a>
-
-												<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-
-												<span class="h3 blk">Be Kind. Ship on time.</span>
-
-											</span>
-
-											<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+											<b>Team Tradesy</b>
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="40" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
