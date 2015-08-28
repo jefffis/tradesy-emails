@@ -248,29 +248,45 @@
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											Hi {first_name},
+											Hi {buyer_first_name},
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											Congratulations, you've purchased <b>{item_name}</b> on Tradesy from <b>{seller}</b>.
+											Congratulations, you&rsquo;ve purchased <b>{item_names}</b> on Tradesy from <b>{seller_display_name}</b>
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											Your order number is: <b>{order_number}</b>
+											Your order number is: <b>{order_id}-{seller_id}A</b>
+											{if tradesy_balance}
+												<br />
+												Your new Tradesy account balance is <a href=\"http://www.tradesy.com/tradesy-cash\"><b>${tradesy_balance}</b></a>.
+											{/if}
 
+											{if shipping}
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											<b>Here's what happens next:</b>
+											<b>Here&rsquo;s what happens next:</b>
 											<br />
-											1. {seller} will confirm that they will be able to ship the item.
+											1. {seller_display_name} will confirm that they will be able to ship the item.
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-											2. {seller} will ship your order, and you’ll receive an email from us with a tracking number.
+											2. {seller_display_name} will ship your order{if item_count > 1}s{/if}, and you&rsquo;ll receive an email from us with a tracking number.
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 											3. You'll receive your Tradesy order!
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											{seller} should ship your order within 10 days (usually sooner). <a href="">Contact us</a> if you have any questions or concerns.
+											{seller_display_name} should ship your order{if item_count > 1}s{/if} within 10 days (usually sooner). <a href="http://www.tradesy.com/contact">Contact us</a> if you have any questions or concerns.
+											{else}
+											1. Your seller will ship your item as soon as possible.
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+											2. You&rsquo;ll receive an email from us with a tracking number.
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+											3. You&rsquo;ll receive your Tradesy purchase!
+
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+											Your item{if item_count > 1}s{/if} should ship within 5 days, (usually sooner). <a href="http://www.tradesy.com/contact">Contact us</a> if you have any questions or concerns.
+											{/if}
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
@@ -279,33 +295,39 @@
 													<td class="content order order-right">
 														<b>Order Details</b>
 														<br />
-														Order #: <b>13929-A</b>
+														Order #: <b>{order_id}-{seller_id}A</b>
 														<br />
-														Placed on: <b>May 16, 2013</b>
+														Placed on: <b>{order_date}</b>
+														{if credit_amount > 0}
 														<br />
-														Display Price: <b>$204.50</b>
+														Display Price: <b>${number(total_price,2)}</b>
 														<br />
-														Tradesy Cash Amount: <b>-$203.00</b>
+														Tradesy Cash Amount: <b>-${number(credit_amount,2)}</b>
 														<br />
-														Total Price: <b>$1.50</b>
+														{total_price = total_price-credit_amount}
 														<br />
-														<a href="">Track your purchases</a>
+														{/if}
+														Total Price: <b>${number(total_price,2)}</b>
+														<br />
+														<a href="http://www.tradesy.com/your-purchases">Track your purchases</a>
 														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 													</td>
 													<td class="content order" valign="top">
 														<b>Item Details</b>
+														{foreach item_list as item}
 														<br />
-														Item Name: <b>Burberry Brown Jacket</b>
+														Item Name: <b>{item.item_name}</b>
 														<br />
-														Sale Price: <b>$204.50</b>
+														Sale Price: <b>${item.buyer_price}</b>
 														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+														{/foreach}
 													</td>
 												</tr>
 											</table>
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											Thanks for shopping on Tradesy! You didn't just get a great deal -- you also supported the growth of the Tradesy community, which is pretty cool (at least we think so). Have questions or feedback? You can contact us anytime at (310) 912-7966, or <a href="mailto:team@tradesy.com">team@tradesy.com</a>.
+											Thanks for shopping on Tradesy! You didn&rsquo;t just get a great deal &mdash; you also supported the growth of the Tradesy community, which is pretty cool (at least we think so). Have questions or feedback? You can contact us anytime at (310) 912-7966, or <a href="mailto:team@tradesy.com">team@tradesy.com</a>.
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="40" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
