@@ -149,7 +149,7 @@
 			width: 75px;
 		}
 		.item img {
-			max-height: 120px;
+			/*max-height: 120px;*/
 			max-width: 120px;
 		}
 		.action td {
@@ -217,11 +217,11 @@
 									<tr>
 										<td class="content" align="left">
 
-											Hi {buyer},
+											Hi {buyer_name},
 											
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											We&rsquo;d like you to know that {seller} has confirmed your purchase. This means their shipping kit is on the way! We&rsquo;ll send a follow-up as soon as we detect they&rsquo;ve shipped! You can also check the status of your order and contact your seller anytime from <a href="" class="blk">Your Purchases</a> page on Tradesy.
+											We&rsquo;d like you to know that {seller_name} has confirmed your purchase. {if kit==1}This means their shipping kit is on the way! We&rsquo;ll send a follow-up as soon as we detect they&rsquo;ve shipped!{else} This means they&rsquo;re preparing your order and will ship soon. We&rsquo;ll send a follow-up as soon as we detect they&rsquo;ve shipped!{/if} You can also check the status of your order and contact your seller anytime from <a href="http://www.tradesy.com/your-purchases" class="blk">Your Purchases</a> page on Tradesy.
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
@@ -284,9 +284,11 @@
 
 														<b>{item_name}</b>
 														<br />
-														{details}
+														{item_price}
 														<br />
-														Item #: {item_order_id}
+														Size: {item_size}
+														<br />
+														Item #: {item_id}
 
 													</td>
 												</tr>
