@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>Your order has shipped!</title>
+		<title>Your order of {item_names} from {seller_display_name}</title>
 
 		<style>
 		html, body {
@@ -257,7 +257,8 @@
 
 											Your order number is: <b>{order_id}-{seller_id}A</b>
 											{if tradesy_balance}
-												<br />
+												<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
 												Your new Tradesy account balance is <a href=\"http://www.tradesy.com/tradesy-cash\"><b>${tradesy_balance}</b></a>.
 											{/if}
 
@@ -276,6 +277,10 @@
 
 											{seller_display_name} should ship your order{if item_count > 1}s{/if} within 10 days (usually sooner). <a href="http://www.tradesy.com/contact">Contact us</a> if you have any questions or concerns.
 											{else}
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+											<b>Here&rsquo;s what happens next:</b>
+											<br />
 											1. Your seller will ship your item as soon as possible.
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 											2. You&rsquo;ll receive an email from us with a tracking number.
