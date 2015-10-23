@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>We&rsquo;ve applied a coupon toward your next purchase!</title>
+		<title>Here&rsquo;s a coupon for your next purchase</title>
 
 		<style>
 		html, body {
@@ -221,7 +221,7 @@
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											We&rsquo;ve applied a coupon toward your next purchase! You&rsquo;ll see the discount of <b>{coupon_amount}</b> applied during checkout in the order summary {if minimum_order_amount} when you complete a purchase of ${minimum_order_amount} or more {/if} on Tradesy.
+											We&rsquo;ve applied a coupon toward your next purchase! You&rsquo;ll see the discount of <b>{coupon_amount}</b> applied during checkout in the order summary {if minimum_order_amount} when you complete a purchase of {minimum_order_amount} or more {/if} on Tradesy.
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
@@ -308,6 +308,8 @@
 		</table>
 
 		<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+
+		{beacon}
 
 	</body>
 </html>
