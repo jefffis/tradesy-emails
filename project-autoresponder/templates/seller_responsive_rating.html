@@ -198,12 +198,10 @@
 			.inl {
 				text-align: center !important;
 			}
-			.inl td {
-				display: inline-block !important;
-				width: 25% !important;
-			}
-			.inl a {
-				padding: 0 5px 20px !important;
+			.inl img {
+				display: block !important;
+				max-width: 40px !important;
+				margin: auto auto -15px !important;
 			}
 		}
 		</style>
@@ -322,24 +320,10 @@
 														<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
 															<tr>
 																<td width="20%" class="content" align="center">
-																	<a href="{link_rating_5}" class="rating-5">
-																		<img src="http://media.sailthru.com/37w/1jy/9/9/540f3738c2f8d.jpg" width="75" alt="rating-5"/>
+																	<a href="{link_rating_1}" class="rating-1">
+																		<img src="http://media.sailthru.com/37w/1jy/9/9/540f37087024d.jpg" width="75" alt="rating-1"/>
 																		<br />
-																		Super!
-																	</a>
-																</td>
-																<td width="20%" class="content" align="center">
-																	<a href="{link_rating_4}" class="rating-4">
-																		<img src="http://media.sailthru.com/37w/1jy/9/9/540f3726a8741.jpg" width="75" alt="rating-4"/>
-																		<br />
-																		Great
-																	</a>
-																</td>
-																<td width="20%" class="content" align="center">
-																	<a href="{link_rating_3}" class="rating-3">
-																		<img src="http://media.sailthru.com/37w/1jy/9/9/540f371f3d66a.jpg" width="75" alt="rating-3"/>
-																		<br />
-																		Good
+																		Awful
 																	</a>
 																</td>
 																<td width="20%" class="content" align="center">
@@ -350,10 +334,24 @@
 																	</a>
 																</td>
 																<td width="20%" class="content" align="center">
-																	<a href="{link_rating_1}" class="rating-1">
-																		<img src="http://media.sailthru.com/37w/1jy/9/9/540f37087024d.jpg" width="75" alt="rating-1"/>
+																	<a href="{link_rating_3}" class="rating-3">
+																		<img src="http://media.sailthru.com/37w/1jy/9/9/540f371f3d66a.jpg" width="75" alt="rating-3"/>
 																		<br />
-																		Awful
+																		Good
+																	</a>
+																</td>
+																<td width="20%" class="content" align="center">
+																	<a href="{link_rating_4}" class="rating-4">
+																		<img src="http://media.sailthru.com/37w/1jy/9/9/540f3726a8741.jpg" width="75" alt="rating-4"/>
+																		<br />
+																		Great
+																	</a>
+																</td>
+																<td width="20%" class="content" align="center">
+																	<a href="{link_rating_5}" class="rating-5">
+																		<img src="http://media.sailthru.com/37w/1jy/9/9/540f3738c2f8d.jpg" width="75" alt="rating-5"/>
+																		<br />
+																		Super!
 																	</a>
 																</td>
 															</tr>
@@ -444,6 +442,8 @@
 		</table>
 
 		<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+
+		{beacon}
 
 	</body>
 </html>
