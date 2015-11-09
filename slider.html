@@ -169,26 +169,31 @@
 		#slides {
 			overflow: hidden;
 		}
-		#slides div {
-			width: 300%;
+		#slides .hide {
+			display: none;
+			mso-hide: all;
+			max-height: 0;
 		}
-		#slides span {
+
+		#slide0:checked ~ #slides img {
 			display: block;
-			width: 33%;
-			float: left;
-			text-align: center;
+			max-height: inherit;
 		}
-		#slides img {
-			display: inline;
+		#slide0:checked ~ #slides img + img {
+			display: none;
+			max-height: 0;
 		}
-		#slide0:checked ~ #slides div { 
-			margin-left: 0; 
+		#slide1:checked ~ #slides img, #slide2:checked ~ #slides img {
+			display: none;
+			max-height: 0;
 		}
-		#slide1:checked ~ #slides div { 
-			margin-left: -100%;
+		#slide1:checked ~ #slides img:nth-child(2) {
+			display: block;
+			max-height: inherit;
 		}
-		#slide2:checked ~ #slides div { 
-			margin-left: -200%; 
+		#slide2:checked ~ #slides img:nth-child(3) {
+			display: block;
+			max-height: inherit;
 		}
 		</style>
 	</head>
@@ -206,7 +211,7 @@
 
 		<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-		<table style="margin:auto;max-width:600px;" id="wrapper" cellpadding="0" cellspacing="0"><tr><td>
+		<table style="margin:auto; max-width:600px;" id="wrapper" cellpadding="0" cellspacing="0"><tr><td>
 
 			<!-- tradesy logo -->
 			<table width="100%" cellpadding="0" cellspacing="0">
@@ -237,66 +242,60 @@
 				<tr>
 					<td class="content" align="center">
 
-						
-
 						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="15"></td></tr></table>
 						
-						<!-- content goes here -->
-
-						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-
-						<table width="100%" cellspacing="0" cellpadding="0">
+						<table width="100%" cellpadding="0" cellspacing="0" border="0">
 							<tr>
 								<td>
 
-									<input type="radio" name="slides" id="slide0" />
-									<input type="radio" name="slides" id="slide1" />
-									<input type="radio" name="slides" id="slide2" />
+									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-									<div id="slides">
+									<table width="100%" cellspacing="0" cellpadding="0"
+										<tr>
+											<td align="center">
 
-										<div>
-										
-											<span>
-												<img src="https://item5.tradesy.com/images/louis-vuitton-alma-tote-bag-brown-5577469-0-0.jpg?width=355&height=355" alt="" />
-											</span>
+												<input type="radio" name="slides" id="slide0" />
+												<input type="radio" name="slides" id="slide1" />
+												<input type="radio" name="slides" id="slide2" />
 
-											<span>
-												<img src="https://item5.tradesy.com/images/louis-vuitton-alma-tote-bag-brown-5577469-2-0.jpg?width=355&height=355" alt="" />
-											</span>
+												<div id="slides">
 
-											<span>
-												<img src="https://item5.tradesy.com/images/louis-vuitton-alma-tote-bag-brown-5577469-4-0.jpg?width=355&height=355" alt="" />
-											</span>
+													<img src="https://item5.tradesy.com/images/louis-vuitton-alma-tote-bag-brown-5577469-0-0.jpg?width=355&height=355" alt="" />
+												
+													<img src="https://item5.tradesy.com/images/louis-vuitton-alma-tote-bag-brown-5577469-2-0.jpg?width=355&height=355" alt="" class="hide" />
+												
+													<img src="https://item5.tradesy.com/images/louis-vuitton-alma-tote-bag-brown-5577469-4-0.jpg?width=355&height=355" alt="" class="hide" />
 
-										</div>
+												</div>
 
-									</div>
+											</td>
+										</tr>
+									</table>
 
-								</td>
-							</tr>
-						</table>
+									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+									
+									<table width="100%" cellspacing="0" cellpadding="0">
+										<tr>
+											<td align="center">
+												<label for="slide0">
+													<img src="https://item5.tradesy.com/images/louis-vuitton-alma-tote-bag-brown-5577469-0-0.jpg?width=75&height=75" />
+												</label>
 
-						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-						
-						<table width="100%" cellspacing="0" cellpadding="0">
-							<tr>
-								<td align="center">
-									<label for="slide0">
-										<img src="https://item5.tradesy.com/images/louis-vuitton-alma-tote-bag-brown-5577469-0-0.jpg?width=355&height=355" />
-									</label>
+												&nbsp;
 
-									&nbsp;
+												<label for="slide1">
+													<img src="https://item5.tradesy.com/images/louis-vuitton-alma-tote-bag-brown-5577469-2-0.jpg?width=75&height=75" />
+												</label>
 
-									<label for="slide1">
-										<img src="https://item5.tradesy.com/images/louis-vuitton-alma-tote-bag-brown-5577469-2-0.jpg?width=355&height=355" />
-									</label>
+												&nbsp;
 
-									&nbsp;
+												<label for="slide2">
+													<img src="https://item5.tradesy.com/images/louis-vuitton-alma-tote-bag-brown-5577469-4-0.jpg?width=75&height=75" />
+												</label>
+											</td>
+										</tr>
+									</table>
 
-									<label for="slide2">
-										<img src="https://item5.tradesy.com/images/louis-vuitton-alma-tote-bag-brown-5577469-4-0.jpg?width=355&height=355" />
-									</label>
 								</td>
 							</tr>
 						</table>
