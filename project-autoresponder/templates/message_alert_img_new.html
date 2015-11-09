@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>An update from Tradesy</title>
+		<title>{sender_name} sent you a message on Tradesy</title>
 
 		<style>
 		html, body {
@@ -149,7 +149,9 @@
 			width: 75px;
 		}
 		.item img {
+			max-height: 120px;
 			max-width: 120px;
+			width : auto;
 		}
 		.action td {
 			background: #f3f3f3;
@@ -438,6 +440,8 @@
 		</table>
 
 		<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+
+		{beacon}
 
 	</body>
 </html>
