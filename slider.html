@@ -171,29 +171,32 @@
 		}
 		#slides .hide {
 			display: none;
-			mso-hide: all;
 			max-height: 0;
 		}
 
-		#slide0:checked ~ #slides img {
-			display: block;
-			max-height: inherit;
+		#slide0:checked + input + #slides img:nth-child(1) {
+			display: block !important;
+			max-height: inherit !important;
 		}
-		#slide0:checked ~ #slides img + img {
-			display: none;
-			max-height: 0;
+		#slide0:checked + input + #slides img {
+			display: none !important;
+			max-height: 0 !important;
 		}
-		#slide1:checked ~ #slides img, #slide2:checked ~ #slides img {
-			display: none;
-			max-height: 0;
+		#slide1:checked + input + #slides img:nth-child(2) {
+			display: block !important;
+			max-height: inherit !important;
 		}
-		#slide1:checked ~ #slides img:nth-child(2) {
-			display: block;
-			max-height: inherit;
+		#slide1:checked + input + #slides img {
+			display: none !important;
+			max-height: 0 !important;
 		}
-		#slide2:checked ~ #slides img:nth-child(3) {
-			display: block;
-			max-height: inherit;
+		#slide2:checked + #slides img:nth-child(3) {
+			display: block !important;
+			max-height: inherit !important;
+		}
+		#slide2:checked + #slides img {
+			display: none !important;
+			max-height: 0 !important;
 		}
 		</style>
 	</head>
