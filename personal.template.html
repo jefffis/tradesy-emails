@@ -90,9 +90,9 @@
 
 		.item {
 			min-width: 220px;
-		    max-width: 230px;
-		    display: inline-block;
-		    padding: 10px 0 0;
+			max-width: 230px;
+			display: inline-block;
+			padding: 10px 0 0;
 		}
 		.item .h3 {
 			display: inline;
@@ -101,28 +101,30 @@
 		}
 		.item a {
 			color: #111111;
-		    text-decoration: none;
+			text-decoration: none;
 		}
 		.item a:active * {
 			opacity: .65
 		}
 		.item img {
-		    max-height: 150px;
-		    max-width: 150px;
-		    margin: auto;
+			max-height: 150px;
+			max-width: 150px;
+			height: auto;
+			width: auto;
+			margin: auto;
 		}
 		.item div, .item table {
-		    height: 150px;
-		    margin-bottom: 15px;
+			height: 150px;
+			margin-bottom: 15px;
 		}
 		.item .h3 {
-		    color: #111;
-		    font-size: 14px;
-		    margin-bottom: 5px;
+			color: #111;
+			font-size: 14px;
+			margin-bottom: 5px;
 		}
 		.item .title {
-		    letter-spacing: 1.5px;
-		    text-transform: uppercase;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
 		}
 		.item .h3 span a {
 			color: #999999;
@@ -169,7 +171,7 @@
 				max-width: 50% !important;
 				width: 50% !important;
 			}
-			.item + .item + .item {
+			.item + .item + .item + .item + .item + .item + .item + .item + .item {
 				display: block !important;
 				float: none !important;
 				min-width: 0 !important;
@@ -221,146 +223,73 @@
 				<tr>
 					<td class="content" align="center">
 
+						{foreach group as set}
 						<!-- section -->
 						<span class="h3 title">
 							<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
-								Boots + Booties
+								{set.name}
 							</font>
 						</span>
 
 						<!--[if (gte mso 9)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table><table width="480" cellpadding="0" cellspacing="0" align="center"><tr><td align="center"><![endif]-->
 						
-						<!-- item -->
-						<div class="item">
-							<!--[if (gte mso 9)|(IE)]><table width="230" cellpadding="0" cellspacing="0" align="left"><tr><td><![endif]-->
-							<table width="100%" cellpadding="0" cellspacing="0">
-								<tr>
-									<td align="center" class="content">
-										<table width="100%" cellpadding="0" cellspacing="0">
-						                	<tr>
-						                		<td class="middle" align="center">
-								                     <a href="##">
-									                    <img src="https://item4.tradesy.com/r/fa77d9c95f227143e1e3a06aa70a88e7f79fb763f23793379fb08892463a47b4/203/307/bags/louis-vuitton/totes/louis-vuitton-neverfull-gm-tote-bag-brown-pink-3566338.jpg" width="200" />
-								                    </a>
-								                </td>
-						                	</tr>
-						                </table>
-						                <span class="h3 title">
-					                		<a href="##">
-					                			<font face="'proxima-nova-semi', 'Helvetica Neue', Arial, sans-serif">
-						                			Louis Vuitton Loing Name
-					                			</font>
-				                			</a>
-						                </span>
-						                <br />
-						                <span class="h3">
-						                	<a href="##">
-							                	<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
-						                			$2,335
-						                		</font>
-					                		</a>
-						                </span>
-									</td>
-								</tr>
-							</table>
-							<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-						</div>
-						<!--\ item -->
-
-						<!-- item -->
-						<div class="item">
-							<!--[if (gte mso 9)|(IE)]><table width="230" cellpadding="0" cellspacing="0" align="right"><tr><td><![endif]-->
-							<table width="100%" cellpadding="0" cellspacing="0">
-								<tr>
-									<td align="center" class="content">
-										<table width="100%" cellpadding="0" cellspacing="0">
-						                	<tr>
-						                		<td class="middle" align="center">
-								                    <a href="##">
-									                    <img src="https://item4.tradesy.com/r/fa77d9c95f227143e1e3a06aa70a88e7f79fb763f23793379fb08892463a47b4/203/307/bags/louis-vuitton/totes/louis-vuitton-neverfull-gm-tote-bag-brown-pink-3566338.jpg" width="200" />
-								                    </a>
-								                </td>
-						                	</tr>
-						                </table>
-						                <span class="h3 title">
-					                		<a href="##">
-					                			<font face="'proxima-nova-semi', 'Helvetica Neue', Arial, sans-serif">
-						                			Louis Vuitton
-					                			</font>
-				                			</a>
-						                </span>
-						                <br />
-						                <span class="h3">
-						                	<a href="##">
-							                	<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
-						                			$2,335
-						                		</font>
-					                		</a>
-					                		&nbsp;
-						                	<span>
-							                	<a href="##">
-							                		<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
-							                			$5,999
-							                		</font>
-						                		</a>
-						                	</span>
-						                </span>
-									</td>
-								</tr>
-							</table>
-							<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-						</div>
-						<!--\ item -->
-
-						<!-- item -->
-						<div class="item">
-							<!--[if (gte mso 9)|(IE)]><table width="230" cellpadding="0" cellspacing="0" align="right"><tr><td><![endif]-->
-							<table width="100%" cellpadding="0" cellspacing="0">
-								<tr>
-									<td align="center" class="content">
-										<table width="100%" cellpadding="0" cellspacing="0">
-						                	<tr>
-						                		<td class="middle" align="center">
-								                    <a href="##">
-									                    <img src="https://item4.tradesy.com/r/fa77d9c95f227143e1e3a06aa70a88e7f79fb763f23793379fb08892463a47b4/203/307/bags/louis-vuitton/totes/louis-vuitton-neverfull-gm-tote-bag-brown-pink-3566338.jpg" width="200" />
-								                    </a>
-								                </td>
-						                	</tr>
-						                </table>
-						                <span class="h3 title">
-					                		<a href="##">
-					                			<font face="'proxima-nova-semi', 'Helvetica Neue', Arial, sans-serif">
-						                			Louis Vuitton
-					                			</font>
-				                			</a>
-						                </span>
-						                <br />
-						                <span class="h3">
-						                	<a href="##">
-							                	<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
-						                			$2,335
-						                		</font>
-					                		</a>
-					                		&nbsp;
-						                	<span>
-							                	<a href="##">
-							                		<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
-							                			$5,999
-							                		</font>
-						                		</a>
-						                	</span>
-						                </span>
-									</td>
-								</tr>
-							</table>
-							<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-						</div>
-						<!--\ item -->
+							{foreach set.items as item}
+							<!-- item -->
+							<div class="item">
+								<!--[if (gte mso 9)|(IE)]><table width="230" cellpadding="0" cellspacing="0" align="left"><tr><td><![endif]-->
+								<table width="100%" cellpadding="0" cellspacing="0">
+									<tr>
+										<td align="center" class="content">
+											<table width="100%" cellpadding="0" cellspacing="0">
+												<tr>
+													<td class="middle" align="center">
+														 <a href="{item.item_url}">
+															<img src="{item.image}" height="150" />
+														</a>
+													</td>
+												</tr>
+											</table>
+											<span class="h3 title">
+												<a href="{item.item_url}">
+													<font face="'proxima-nova-semi', 'Helvetica Neue', Arial, sans-serif">
+														{item.item_brand}
+													</font>
+												</a>
+											</span>
+											<br />
+											<span class="h3">
+												<a href="{item.item_url}">
+													<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
+														{item.display_price}
+													</font>
+												</a>
+												{if item.original_price != "0.00"}
+												&nbsp;
+												<span>
+													<a href="{item.item_url}">
+														<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
+															{item.original_price}
+														</font>
+													</a>
+												</span>
+												{/if}
+											</span>
+										</td>
+									</tr>
+								</table>
+								<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+							</div>
+							<!--\ item -->
+							{/foreach}
 
 						<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
 						<!--/ section -->
 
 						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;" bgcolor="#cccccc">&nbsp;</td></tr></table>
+						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+						{/foreach}
 						
 						<table width="100%" cellspacing="0" cellpadding="0">
 							<tr>
@@ -368,7 +297,7 @@
 									<table width="220" cellspacing="0" cellpadding="0">
 										<tr>
 											<td class="btn-col content" align="center">
-												<a href="https://www.tradesy.com/all/gucci/">
+												<a href="https://www.surveymonkey.com/r/KT3JT9K">
 													<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
 														Take the Survey
 													</font>
