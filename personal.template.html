@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>Tradesy Personalized Recommendations</title>
+		<title>What do you think of your personalized recommendations?</title>
 
 		<style>
 		@font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
@@ -70,6 +70,7 @@
 		.h3 {
 			color: #111111;
 			font-size: 20px;
+			text-transform: capitalize;
 		}
 		a {
 			color: #ee7873;
@@ -211,13 +212,31 @@
 		<table style="margin:auto;max-width:500px;" id="wrapper" cellpadding="0" cellspacing="0"><tr><td>
 
 			<!-- tradesy logo -->
-			<table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center">
-				<a href="https://www.tradesy.com/"><img src="http://media.tradesy.com/7826/email-logo.jpeg" alt="Tradesy: buy &amp; sell clothes online" height="35" border="0" class="logo" /></a>
-			</td></tr></table>
+			<table width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="10"></td>
+					<td align="left">
+						<a href="https://www.tradesy.com/"><img src="http://wtf.jefff.co/tradesy-emails/img/email-logo.gif" alt="Tradesy: buy &amp; sell clothes online" height="17" class="logo" border="0" /></a>
+					</td>
+					<td class="content h" align="right">
+						
+						<!-- shop & sell links -->
+						<a href="https://www.tradesy.com/all/"><font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Shop</font></a>
+						
+						&nbsp;&nbsp;&nbsp;
 
+						<a href="https://www.tradesy.com/sell/"><font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">Sell</font></a>
+						<!--\ shop & sell links -->
+
+					</td>
+					<td width="10"></td>
+				</tr>
+			</table>
+			<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="10"></td></tr></table>
 			<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;" bgcolor="#cccccc">&nbsp;</td></tr></table>
-			<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="30"></td></tr></table>
 			<!--\ tradesy logo -->
+
+			<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
 
 			<table width="100%" cellpadding="0" cellspacing="0" border="0">
 				<tr>
@@ -260,7 +279,7 @@
 											<span class="h3">
 												<a href="{item.item_url}">
 													<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
-														{item.display_price}
+														${item.display_price}
 													</font>
 												</a>
 												{if item.original_price != "0.00"}
@@ -268,7 +287,7 @@
 												<span>
 													<a href="{item.item_url}">
 														<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
-															{item.original_price}
+															${item.original_price}
 														</font>
 													</a>
 												</span>
@@ -290,6 +309,24 @@
 						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
 						{/foreach}
+
+						<table width="100%" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="20"></td>
+								<td align="center" class="content">
+									
+									We took a stab at personalized recommendations just for you.
+
+									<font face="'proxima-nova-semi', 'Helvetica Neue', Arial, sans-serif">
+										How&rsquo;d we do? We&rsquo;d love to know!
+									</font>
+
+								</td>
+								<td width="20"></td>
+							</tr>
+						</table>
+
+						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 						
 						<table width="100%" cellspacing="0" cellpadding="0">
 							<tr>
@@ -299,7 +336,7 @@
 											<td class="btn-col content" align="center">
 												<a href="https://www.surveymonkey.com/r/KT3JT9K">
 													<font face="'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif">
-														Take the Survey
+														Tell Us Now
 													</font>
 												</a>
 											</td>
