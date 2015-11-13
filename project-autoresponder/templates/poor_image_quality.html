@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>Reset Your Password</title>
+		<title>Enhance Your Image!</title>
 
 		<style>
 		html, body {
@@ -47,6 +47,9 @@
 			font-family: 'Helvetica Neue', Arial, sans-serif;
 			font-size: 15px;
 			line-height: 22px;
+		}
+		.lg {
+			font-size: 24px;
 		}
 		del {
 			color: #999999;
@@ -124,36 +127,11 @@
 			display: block;
 			text-align: center;
 		}
-		.border {
-			border: 1px solid #cccccc;
-			height: 60px;
-		}
-		.profile {
-			border-radius: 100%;
-			border: 1px solid #111111;
-			color: #111111;
-			font-family: 'Helvetica Neue', Arial, sans-serif;
-			font-size: 24px;
-			letter-spacing: 1.5px;
-		}
-		.img {
-			border: 0;
-		}
-		.profile img {
-			border-radius: 100%;
-			color: #111111;
-			font-family: 'Helvetica Neue', Arial, sans-serif;
-			font-size: 24px;
-			letter-spacing: 1.5px;
-			margin: 0;
-			width: 75px;
-		}
-		.item img {
+		.your-image {
 			max-height: 120px;
 			max-width: 120px;
-		}
-		.action td {
-			background: #f3f3f3;
+			height: auto;
+			width: auto;
 		}
 		@media screen and (max-width: 600px) {
 			.hide {
@@ -220,18 +198,74 @@
 											<table width="100%" cellpadding="0" cellspacing="0">
 												<tr>
 													<td align="center" class="content">
-														<span class="h1">Reset Your Password</span>
+														<span class="h1">Enhance Your Image!</span>
 													</td>
 												</tr>
 											</table>
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="40" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											Lost passwords happen to the best of us. But fear not, we&rsquo;ve got you covered.
+											Hi {display_name},
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											<a href="{resetURL}">Click here to reset your Tradesy password</a> for <a href="mailto:{email}" class="blk">{email}</a>.
+											We noticed that the cover photo for your <b>{item_title}</b> is <b>{reason}</b>. We&rsquo;re going to professionally clean your cover photo, but before we do, we suggest that you update it so that our team will be able to make your listing look great!
+
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+											<img src="{image_url}" class="your-image" width="150" />
+
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+											To enhance your chance of selling your item quickly, please update this image and keep these tips in mind:
+
+											<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
+
+											<table width="100%" cellpadding="0" cellspacing="0" border="0">
+												<tr>
+													<td class="content lg" valign="top">&bull;</td>
+													<td width="10"></td>
+													<td class="content">Make sure the entire item is within the frame of the image</td>
+												</tr>
+												<tr>
+													<td height="10"></td>
+													<td height="10"></td>
+													<td height="10"></td>
+												</tr>
+												<tr>
+													<td class="content lg" valign="top">&bull;</td>
+													<td width="10"></td>
+													<td class="content">Take the picture in a well-lit area so your colors pop</td>
+												</tr>
+												<tr>
+													<td height="10"></td>
+													<td height="10"></td>
+													<td height="10"></td>
+												</tr>
+												<tr>
+													<td class="content lg" valign="top">&bull;</td>
+													<td width="10"></td>
+													<td class="content">Give the picture a glance to make sure it isn't too blurry</td>
+												</tr>
+											</table>
+
+											<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="30"></td></tr></table>
+
+											<table width="100%" cellspacing="0" cellpadding="0">
+												<tr>
+													<td align="center">
+														<table width="220" cellspacing="0" cellpadding="0">
+															<tr>
+																<td class="btn-col content" align="center">
+																	<a href="http://www.tradesy.com/edit-item/{item_id}">
+																		Update Listing
+																	</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="40" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
