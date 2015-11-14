@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>An update from Tradesy</title>
+		<title>{if warning_level==0} Your item sold for ${earnings}! Please confirm your sale by {confirm_date} {else if warning_level==1} Reminder: Your item sold for ${earnings}! Please confirm by {confirm_date} {else if warning_level==2} Action Required: You must confirm your sale by {confirm_date} to avoid losing earnings of ${earnings}!{/if}</title>
 
 		<style>
 		html, body {
@@ -278,7 +278,7 @@
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-												<a href="" class="blk">{buyer_display_name}</a> purchased <a href="" class="blk">{item_name}</a>
+												<b>{buyer_display_name}</b> purchased <b>{item_name}</b>
 
 											<!-- item -->
 											<table width="100%" cellspacing="0" cellpadding="0">
@@ -343,7 +343,7 @@
 														<table width="200" cellspacing="0" cellpadding="0">
 															<tr>
 																<td class="btn-col content" align="center">
-																	<a href="{confirm_url}">Confirm Now</a>
+																	<a href="{if has_shipping_address != "true"}https://www.tradesy.com/sales{else}{confirm_url}{/if}">Confirm Now</a>
 																</td>
 															</tr>
 														</table>
