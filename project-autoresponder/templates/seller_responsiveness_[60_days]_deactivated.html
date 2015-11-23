@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>An update from Tradesy</title>
+		<title>Your listings have expired - renew them today</title>
 
 		<style>
 		html, body {
@@ -139,9 +139,6 @@
 		.img {
 			border: 0;
 		}
-		.light-content {
-			color : #777;
-		}
 		.profile img {
 			border-radius: 100%;
 			color: #111111;
@@ -151,23 +148,62 @@
 			margin: 0;
 			width: 75px;
 		}
+		.item {
+			min-width: 220px;
+			max-width: 280px;
+			display: inline-block;
+			padding: 10px 0 0;
+		}
+		.item .h3 {
+			display: inline;
+			color: #777777;
+			font-size: 17px;
+		}
+		.item a {
+			color: #111111;
+			text-decoration: none;
+		}
+		.item a:active * {
+			opacity: .65
+		}
 		.item img {
-			max-height: 120px;
-			max-width: 120px;
-			width : auto;
+			max-height: 150px;
+			max-width: 150px;
+			height: auto !important;
+			width: auto !important;
+		}
+		.item div, .item table {
+			height: 150px;
+			margin-bottom: 15px;
+		}
+		.item .h3 {
+			color: #111;
+			font-size: 14px;
+			margin-bottom: 5px;
+		}
+		.item .title {
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+		}
+		.item .h3 span a {
+			color: #999999;
+			text-decoration: line-through;
+		}
+		.middle {
+			height: 150px;
+			vertical-align: bottom;
 		}
 		.action td {
 			background: #f3f3f3;
 		}
 		.notice {
-			/*background: #fff9e2;*/
-			background: #ffffff;
+			background: #fff9e2;
 		}
-		/*.notice .content {
+		.notice .content {
 			font-size: 13px;
 			line-height: 17px;
-		}*/
-		.notice b {
+		}
+		.notice .content span {
 			font-weight: bold;
 			letter-spacing: 1.5px;
 			text-transform: uppercase;
@@ -234,94 +270,41 @@
 									<tr>
 										<td class="content" align="left">
 
-											<table width="100%" cellspacing="0" cellpadding="0" class="action">
+											<table width="100%" cellpadding="0" cellspacing="0">
 												<tr>
-													<td height="5" width="15"></td>
-													<td height="5"></td>
-													<td height="5" width="15"></td>
-												</tr>
-												<tr>
-													<td width="15"></td>
-													<td align="center" class="content caps">
-														Confirm this sale by <b class="red">{confirm_date}</b>
+													<td align="center" class="content">
+														<span class="h1">
+															Your listings have expired!
+														</span>
 													</td>
-													<td width="15"></td>
-												</tr>
-												<tr>
-													<td height="5" width="15"></td>
-													<td height="5"></td>
-													<td height="5" width="15"></td>
 												</tr>
 											</table>
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-												<a href="" class="blk">{buyer_display_name}</a> purchased <a href="" class="blk">{item_name}</a>
+											Hi {seller_name},
 
-											<!-- item -->
-											<table width="100%" cellspacing="0" cellpadding="0">
-												<tr>
-													<td align="center" class="content">
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-
-														<table width="150" cellspacing="0" cellpadding="0" align="center">
-															<tr>
-																<td class="border">
-																	<table width="100%" cellspacing="0" cellpadding="0">
-																		<tr>
-																			<td width="10" height="10"></td>
-																			<td height="10"></td>
-																			<td width="10" height="10"></td>
-																		</tr>
-																		<tr>
-																			<td width="10"></td>
-																			<td class="item">
-																				<img src="{item_image}" alt="{item_name}" width="120" />
-																			</td>
-																			<td width="10"></td>
-																		</tr>
-																		<tr>
-																			<td width="10" height="10"></td>
-																			<td height="10"></td>
-																			<td width="10" height="10"></td>
-																		</tr>
-																	</table>	
-																</td>
-															</tr>
-														</table>
-
-														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-
-														
-														Congrats, you&rsquo;ll earn
-														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-														<span class="h2">${earnings}</span>
-														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-														after you confirm &amp; ship your item.
-														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-														<span class="ibk">
-															Order #: {order_number}
-														</span>
-														&nbsp;&nbsp;
-														<span class="ibk">
-															Status: <b class="red">Unconfirmed</b>
-														</span>
-														
-
-													</td>
-												</tr>
-											</table>
+											We haven&rsquo;t seen you login to Tradesy for over <b>60 days</b> so we&rsquo;ve deactivated your listings just in case you&rsquo;re not interested in selling them anymore. If you still want a chance at those earnings, all you have to do is login to the Tradesy website or App to reactivate your listings!
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="35" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
 											<table width="100%" cellspacing="0" cellpadding="0">
 												<tr>
 													<td align="center">
-														<table width="200" cellspacing="0" cellpadding="0">
+														<table width="280" cellspacing="0" cellpadding="0">
 															<tr>
 																<td class="btn-col content" align="center">
-																	<a href="{confirm_url}">Confirm Now</a>
+																	<a href="http://www.tradesy.com/login">Login Now</a>
+																</td>
+															</tr>
+															<tr>
+																<td height="15"></td>
+															</tr>
+															<tr>
+																<td align="center" class="content">
+																	To keep your listings live
 																</td>
 															</tr>
 														</table>
@@ -329,38 +312,68 @@
 												</tr>
 											</table>
 
-											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											<span class="center content">
-												or <a href="{cancel_url}" class="blk">Cancel Sale</a>
+											<table width="100%" cellspacing="0" cellpadding="0">
+												<tr>
+													<td align="center">
 
-												<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-												
-												<i class="light-content">Be Kind. Ship on time.</i>
-											</span>
+														<span class="h2">Keep your listings live</span>
 
-										</td>
-									</tr>
-								</table>
+														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-							</td>
-							<td width="20"></td>
-						</tr>
-						<tr>
-							<td height="20" width="20"></td>
-							<td height="20"></td>
-							<td height="20" width="20"></td>
-						</tr>
-					</table>
+														<!--[if (gte mso 9)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table><table width="480" cellpadding="0" cellspacing="0" align="center"><tr><td align="center"><![endif]-->
+									
+														{foreach item_list as item}
+														<!-- item -->
+														<div class="item">
+															<!--[if (gte mso 9)|(IE)]><table width="280" cellpadding="0" cellspacing="0" align="left"><tr><td><![endif]-->
+															<table width="100%" cellpadding="0" cellspacing="0">
+																<tr>
+																	<td align="center" class="content">
+																		<table width="100%" cellpadding="0" cellspacing="0">
+																			<tr>
+																				<td class="middle" align="center">
+																					 <a href="{item.link}">
+																						<img src="{item.image}" width="150" />
+																					</a>
+																				</td>
+																			</tr>
+																		</table>
+																		<span class="h3 title">
+																			<a href="{item.link}">
+																				<b>
+																					{item.name}
+																				</b>
+																			</a>
+																		</span>
+																		<br />
+																		<span>
+																			Your Price: <a href="{item.item_url}"><b>${item.price}</b></a>
+																		</span>
+																	</td>
+																</tr>
+															</table>
+															<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+														</div>
+														<!--\ item -->
+														{/foreach}
 
-					<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
-						<tr>
-							<td width="20"></td>
-							<td>
-								<!-- content -->
-								<table width="100%" cellpadding="0" cellspacing="0">
-									<tr>
-										<td class="content" align="left">
+														<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+
+														<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+														What happens to my listings if I don&rsquo;t login? <a href="http://help.tradesy.com/article/179-do-tradesy-listings-expire">Learn more about expired listings</a>
+
+													</td>
+												</tr>
+											</table>
+
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="40" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;" bgcolor="#cccccc">&nbsp;</td></tr></table>
+
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
 											Questions? Contact us anytime at <a href="tel:13109127966" class="blk">(310) 912-7966</a>, or <a href="mailto:team@tradesy.com" class="blk">team@tradesy.com</a>
 
@@ -375,34 +388,6 @@
 							<td height="20" width="20"></td>
 							<td height="20"></td>
 							<td height="20" width="20"></td>
-						</tr>
-					</table>
-
-					<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;" bgcolor="#dddddd">&nbsp;</td></tr></table>
-
-					<table width="100%" cellpadding="0" cellspacing="0" class="notice">
-						<tr>
-							<td height="25"></td>
-						</tr>
-						<tr>
-							<td align="center">
-								<table width="100%" cellpadding="0" cellspacing="0" style="max-width: 500px;">
-									<tr>
-										<td width="15"></td>
-										<td class="content" align="center">
-											<b>Never miss a sale.</b>
-											
-											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-
-											<a href="">Sign up for Tradesy Text Alerts</a> to get important notifications on your mobile phone.
-										</td>
-										<td width="15"></td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-						<tr>
-							<td height="25"></td>
 						</tr>
 					</table>
 
@@ -461,6 +446,8 @@
 		</table>
 
 		<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+
+		{beacon}
 
 	</body>
 </html>
