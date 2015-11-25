@@ -156,6 +156,22 @@
 		.action td {
 			background: #f3f3f3;
 		}
+		.notice {
+			/*background: #fff9e2;*/
+			background: #ffffff;
+		}
+		/*.notice .content {
+			font-size: 13px;
+			line-height: 17px;
+		}*/
+		.notice b {
+			font-weight: bold;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+		}
+		.light-content {
+			color : #777;
+		}
 		@media screen and (max-width: 600px) {
 			.hide {
 				display: none !important;
@@ -304,13 +320,42 @@
 												</tr>
 											</table>
 
-											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="40" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;" bgcolor="#cccccc">&nbsp;</td></tr></table>
+											Questions? Contact us anytime at <a href="tel:13109127966" class="blk">(310) 912-7966</a>, or <a href="mailto:team@tradesy.com" class="blk">team@tradesy.com</a>
+
+											{if has_sms == 0}
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											Questions? Contact us anytime at <a href="tel:13109127966" class="blk">(310) 912-7966</a>, or <a href="mailto:team@tradesy.com" class="blk">team@tradesy.com</a>
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;" bgcolor="#dddddd">&nbsp;</td></tr></table>
+
+											<table width="100%" cellpadding="0" cellspacing="0" class="notice">
+												<tr>
+													<td height="25"></td>
+												</tr>
+												<tr>
+													<td align="center">
+														<table width="100%" cellpadding="0" cellspacing="0" style="max-width: 500px;">
+															<tr>
+																<td width="15"></td>
+																<td class="content" align="center">
+																	<b>Know the second it hits your doorstep.</b>
+																	
+																	<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+																	<a href="https://www.tradesy.com/notification-settings">Set up Tradesy Text Alerts</a> to get order updates via text message.
+																</td>
+																<td width="15"></td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+												<tr>
+													<td height="5"></td>
+												</tr>
+											</table>
+											{/if}
 
 										</td>
 									</tr>
