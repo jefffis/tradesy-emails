@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>You&rsquo;ve received a Tradesy Gift Card</title>
+		<title>You've received a Tradesy Gift Card from {sender}!</title>
 
 		<style>
 		@font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
@@ -230,7 +230,7 @@
 										<tr>
 											<td width="20"></td>
 											<td class="content" align="center">
-												{name} sent you a <b>${value}</b> gift.
+												{sender} sent you a <b>${value}</b> gift.
 											</td>
 											<td width="20"></td>
 										</tr>
@@ -238,7 +238,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td height="40"></td>
+								<td height="35"></td>
 							</tr>
 						</table>
 						<!--/ gift card header -->
@@ -254,7 +254,7 @@
 
 									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-									<b class="gift">{code}</b>
+									<a href="https://www.tradesy.com/coupon?code={code}" class="gift"><b>{code}</b></a>
 
 									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
@@ -269,6 +269,7 @@
 
 						<img src="http://wtf.jefff.co/tradesy-emails/gift-card/spacer.gif" width="100%" />
 
+						{if message}
 						<table width="100%" cellspacing="0" cellpadding="0">
 							<tr>
 								<td align="center">
@@ -280,7 +281,7 @@
 
 												<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-												Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quasi error accusantium illo, qui quaerat deserunt facilis aut modi reiciendis, ad exercitationem, quod ea iste. Provident accusantium obcaecati, minima. Est?
+												{message}
 
 											</td>
 										</tr>
@@ -290,6 +291,8 @@
 						</table>
 
 						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+						{/if}
+
 						<table width="100%" style="margin:auto" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;" bgcolor="#cccccc">&nbsp;</td></tr></table>
 						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
@@ -305,7 +308,7 @@
 
 									<br />
 
-									Gauranteed Authentic. Save up to 90%	
+									Gauranteed Authentic. Save up to 90%
 
 								</td>
 							</tr>
@@ -317,10 +320,10 @@
 							<tr>
 								<td align="center" class="pad">
 									<!--[if (gte mso 9)|(IE)]><table width="400" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td align="center"><![endif]-->
-									<table width="100%" cellspacing="0" cellpadding="0" style="margin:auto; max-width:300px;">
+									<table width="100%" cellspacing="0" cellpadding="0" style="margin:auto; max-width:400px;">
 										<tr>
 											<td class="btn-col content" align="center">
-												<a href="###">
+												<a href="http://www.tradesy.com/">
 													<img src="http://wtf.jefff.co/tradesy-emails/gift-card/shop-now.gif" width="185" alt="Shop Now" />
 												</a>
 											</td>
@@ -348,10 +351,13 @@
 											<td width="20"></td>
 											<td class="content" align="center">
 
-												<a href="http://facebook.com/gotradesy" target="_blank" title="Facebook"><img class="icon" src="http://media.sailthru.com/37w/1jy/4/8/534459e42e372.png" alt="facebook" width="9" height="16" style="margin-right: 15px; opacity: .8;"></a>
-												<a href="http://twitter.com/tradesy" target="_blank" title="Twitter"><img class="icon" src="http://media.sailthru.com/37w/1jy/4/8/534459fb7bbd2.png" alt="twitter" width="16" height="14" style="margin-right: 15px; opacity: .8;"></a>
-												<a href="http://pinterest.com/tradesy" target="_blank" title="Pinterest"><img class="icon" src="http://media.sailthru.com/37w/1jy/4/8/534459f3b4d5c.png" alt="pinterest" width="14" height="17" style="margin-right: 15px; opacity: .8;"></a>
-												<a href="http://instagram.com/tradesy" target="_blank" title="Instagram"><img class="icon" src="http://media.sailthru.com/37w/1jy/4/8/534459ec8c1ea.png" alt="instagram" width="16" height="16" style="opacity: .8;"></a>
+												<a href="http://facebook.com/gotradesy" target="_blank" title="Facebook"><img class="icon" src="http://media.sailthru.com/37w/1jy/4/8/534459e42e372.png" alt="facebook" width="9" height="16"></a>
+												&nbsp;&nbsp;&nbsp;
+												<a href="http://twitter.com/tradesy" target="_blank" title="Twitter"><img class="icon" src="http://media.sailthru.com/37w/1jy/4/8/534459fb7bbd2.png" alt="twitter" width="16" height="14"></a>
+												&nbsp;&nbsp;&nbsp;
+												<a href="http://pinterest.com/tradesy" target="_blank" title="Pinterest"><img class="icon" src="http://media.sailthru.com/37w/1jy/4/8/534459f3b4d5c.png" alt="pinterest" width="14" height="17"></a>
+												&nbsp;&nbsp;&nbsp;
+												<a href="http://instagram.com/tradesy" target="_blank" title="Instagram"><img class="icon" src="http://media.sailthru.com/37w/1jy/4/8/534459ec8c1ea.png" alt="instagram" width="16" height="16"></a>
 
 												<br /><br />
 
@@ -394,6 +400,8 @@
 		<!--[if (gte mso 9)|(IE)]>
 			</td></tr></table>
 		<![endif]-->
+
+		{beacon}
 	 
 	</body>
 </html>
