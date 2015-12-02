@@ -257,7 +257,7 @@
 
 		<!-- customize Gmail / iOS content begin -->
 		<table width="100%" cellspacing="0" cellpadding="0"><tr><td style="font-size: 0; height: 0; display:none;">
-			Use this code, {code}, at checkout to receive your ${value} gift from {sender}! Or visit tradesy.com/coupon to claim your ${amount} in Tradesy Credit!
+			Use this code, {code}, at checkout to receive your ${value} gift from {sender}! Or visit tradesy.com/coupon to claim your ${value} in Tradesy Credit!
 		</td></tr></table>
 		<!-- customize Gmail / iOS content end -->
  
@@ -315,7 +315,7 @@
 
 						<img src="http://wtf.jefff.co/tradesy-emails/gift-card/spacer.gif" width="100%" />
 
-						<!-- {if message} -->
+						{if message}
 						<table width="100%" cellspacing="0" cellpadding="0">
 							<tr>
 								<td align="center">
@@ -338,13 +338,10 @@
 
 						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 						<table width="100%" style="margin:auto" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;" bgcolor="#cccccc">&nbsp;</td></tr></table>
-						<!-- <table width="100%" cellspacing="0" cellpadding="0"><tr><td height="35" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table> -->
-						<!-- {/if} -->
+						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+						{/if}
 
 						<table width="100%" cellpadding="0" cellspacing="0">
-							<tr>
-								<td height="30"></td>
-							</tr>
 							<tr>
 								<td class="content" align="center">
 									
@@ -356,13 +353,25 @@
 
 									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-									or <a href="https://www.tradesy.com/coupon?id={code}">click to claim your ${amount} in Tradesy Credit now!</a>
+									or <a href="https://www.tradesy.com/coupon?id={code}">click to claim your ${value} in Tradesy Credit now!</a>
 
 									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+									
+									<table width="100%" cellspacing="0" cellpadding="0">
+										<tr>
+											<td align="center">
+												<table width="400" cellspacing="0" cellpadding="0" class="narrow">
+													<tr>
+														<td class="content small" align="center">
 
-									<span class="small">
-										Credit will be applied to your Tradesy account and you&rsquo;ll be able to use it towards your next purchase.
-									</span>
+																Credit will be applied to your Tradesy account and you&rsquo;ll be able to use it towards your next purchase.
+
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
 
 								</td>
 							</tr>
@@ -382,11 +391,25 @@
 
 									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-									Resale is the new retail.
+									<table width="100%" cellspacing="0" cellpadding="0">
+										<tr>
+											<td align="center">
+												<table width="400" cellspacing="0" cellpadding="0" class="narrow">
+													<tr>
+														<td class="content" align="center">
 
-									<br />
+															Resale is the new retail.
 
-									Shop millions of new and pre-owned designer styles. Authenticity guaranteed.
+															<br />
+
+															Shop millions of new and pre-owned designer styles. Authenticity guaranteed.
+
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
 
 								</td>
 							</tr>
@@ -464,7 +487,7 @@
 											<tr>
 												<td class="middle" align="center">
 													 <a href="https://www.tradesy.com/trend/best-bags-under-300/">
-														<img src="bags-under-300.jpg" width="220" alt="Bags Under $300" />
+														<img src="http://wtf.jefff.co/tradesy-emails/gift-card/bags-under-300.jpg" width="220" alt="Bags Under $300" />
 													</a>
 												</td>
 											</tr>
@@ -582,7 +605,7 @@
 									<table width="100%" cellspacing="0" cellpadding="0" style="margin:auto; max-width:400px;">
 										<tr>
 											<td class="btn-col content" align="center">
-												<a href="http://www.tradesy.com/">
+												<a href="https://www.tradesy.com/trend/best-under-100/">
 													<img src="http://wtf.jefff.co/tradesy-emails/gift-card/shop-now.gif" width="185" alt="Shop Now" />
 												</a>
 											</td>
