@@ -284,58 +284,38 @@
 				<tr>
 					<td class="content" align="center">
 
-						<img src="youve-received-a-tradesy-gift-card.jpg" width="100%" alt="You've received a Tradesy Gift Card" />
-
-						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-
-						<table width="100%" cellpadding="0" cellspacing="0">
+						<!-- gift card header -->
+						<table width="100%" cellpadding="0" cellspacing="0" class="header">
 							<tr>
-								<td class="content" align="center">
-
-									<b class="gift">{sender} sent you a ${value} gift.</b>
+								<td height="40"></td>
+							</tr>
+							<tr>
+								<td align="center" class="pad">
+									
+									<a href="https://www.tradesy.com/"><img src="http://wtf.jefff.co/tradesy-emails/gift-card/youve-received-a-gift.gif" alt="You&rsquo;ve received a Tradesy Gift Card" width="300" /></a>
 
 									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-									
-									Use this code at checkout
 
-									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-
-									<b class="gift">{code}</b>
-
-									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-
-									or <a href="https://www.tradesy.com/coupon?id={code}">click to claim your ${value} in Tradesy Credit now!</a>
-
-									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-									
-									<table width="100%" cellspacing="0" cellpadding="0">
+									<table width="100%" cellpadding="0" cellspacing="0">
 										<tr>
-											<td align="center">
-												<table width="400" cellspacing="0" cellpadding="0" class="narrow">
-													<tr>
-														<td width="20"></td>
-														<td class="content small" align="center">
-
-															Credit will be applied to your Tradesy account and you&rsquo;ll be able to use it towards your next purchase.
-
-														</td>
-														<td width="20"></td>
-													</tr>
-												</table>
+											<td width="20"></td>
+											<td class="content large" align="center">
+												{sender} sent you a <b>${value}</b> gift.
 											</td>
+											<td width="20"></td>
 										</tr>
 									</table>
-
 								</td>
 							</tr>
 							<tr>
-								<td height="30"></td>
+								<td height="35"></td>
 							</tr>
 						</table>
+						<!--/ gift card header -->
 
-						<!-- {if message} -->
-						<table width="100%" style="margin:auto" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;" bgcolor="#cccccc">&nbsp;</td></tr></table>
-						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+						<img src="http://wtf.jefff.co/tradesy-emails/gift-card/spacer.gif" width="100%" />
+
+						{if message}
 						<table width="100%" cellspacing="0" cellpadding="0">
 							<tr>
 								<td align="center">
@@ -355,8 +335,50 @@
 								</td>
 							</tr>
 						</table>
+
 						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-						<!-- {/if} -->
+						<table width="100%" style="margin:auto" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;" bgcolor="#cccccc">&nbsp;</td></tr></table>
+						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+						{/if}
+
+						<table width="100%" cellpadding="0" cellspacing="0">
+							<tr>
+								<td class="content" align="center">
+									
+									Use this code at checkout
+
+									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+									<b class="gift">{code}</b>
+
+									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+									or <a href="https://www.tradesy.com/coupon?id={code}">click to claim your ${value} in Tradesy Credit now!</a>
+
+									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+									
+									<table width="100%" cellspacing="0" cellpadding="0">
+										<tr>
+											<td align="center">
+												<table width="400" cellspacing="0" cellpadding="0" class="narrow">
+													<tr>
+														<td class="content small" align="center">
+
+																Credit will be applied to your Tradesy account and you&rsquo;ll be able to use it towards your next purchase.
+
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+
+								</td>
+							</tr>
+							<tr>
+								<td height="30"></td>
+							</tr>
+						</table>
 
 						<table width="100%" style="margin:auto" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;" bgcolor="#cccccc">&nbsp;</td></tr></table>
 						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="35" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
