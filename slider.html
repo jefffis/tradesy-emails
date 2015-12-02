@@ -152,9 +152,11 @@
 
 		/*** image slider ***/
 		input {
-			display: none;
-			height: 0;
-			visibility: hidden;
+			display: none !important;
+			position: relative !important;
+			left: -9999px !important;
+			height: 0 !important;
+			visibility: hidden !important;
 		}
 		label {
 			cursor: pointer;
@@ -391,6 +393,8 @@
 		<!--[if (gte mso 9)|(IE)]>
 			</td></tr></table>
 		<![endif]-->
+
+		{beacon}
 	 
 	</body>
 </html>

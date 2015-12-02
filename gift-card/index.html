@@ -79,6 +79,7 @@
 		}
 		a {
 			color: #ee7873;
+			text-decoration: none;
 		}
 		.tel {
 			color: #111111;
@@ -165,7 +166,7 @@
 		}
 
 		.gift {
-			color: rgb(238, 120, 115);
+			/*color: rgb(238, 120, 115);*/
 			font-size: 20px;
 		}
 
@@ -202,10 +203,10 @@
 			font-size: 14px;
 			margin-bottom: 5px;
 		}
-		.item .title {
+		/*.item .title {
 			letter-spacing: 1.5px;
 			text-transform: uppercase;
-		}
+		}*/
 		.item .h3 span a {
 			color: #999999;
 			text-decoration: line-through;
@@ -217,6 +218,15 @@
 
 		.pad {
 			padding: 0 15px;
+		}
+
+		.large {
+			font-size: 18px;
+		}
+		.small {
+			color: #777777;
+			font-size: 12px;
+			line-height: 15px;
 		}
 
 		@media screen and (max-width: 500px) {
@@ -240,13 +250,6 @@
 				max-height: 100% !important;
 				max-width: 100% !important;
 			}
-			.item .h3.title a {
-				display: inline-block !important;
-				max-width: 130px !important;
-				overflow: hidden !important;
-				text-overflow: ellipsis !important;
-				white-space: nowrap !important;
-			}
 		}
 		</style>
 	</head>
@@ -254,7 +257,7 @@
 
 		<!-- customize Gmail / iOS content begin -->
 		<table width="100%" cellspacing="0" cellpadding="0"><tr><td style="font-size: 0; height: 0; display:none;">
-			Use this code, {code}, at checkout to receive your ${value} gift from {sender}! Or visit tradesy.com/coupon to redeem your code + get Tradesy Credit!
+			Use this code, {code}, at checkout to receive your ${value} gift from {sender}! Or visit tradesy.com/coupon to claim your ${amount} in Tradesy Credit!
 		</td></tr></table>
 		<!-- customize Gmail / iOS content end -->
  
@@ -262,7 +265,7 @@
 			<table width="600" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td width="600" align="center">
 		<![endif]-->
 
-		<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+		<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
 		<table style="margin:auto; max-width:600px;" id="wrapper" cellpadding="0" cellspacing="0"><tr><td>
 
@@ -289,14 +292,14 @@
 							<tr>
 								<td align="center" class="pad">
 									
-									<img src="http://wtf.jefff.co/tradesy-emails/gift-card/youve-received-a-gift.gif" alt="You&rsquo;ve received a Tradesy Gift Card" width="350" />
+									<a href="https://www.tradesy.com/"><img src="http://wtf.jefff.co/tradesy-emails/gift-card/youve-received-a-gift.gif" alt="You&rsquo;ve received a Tradesy Gift Card" width="300" /></a>
 
 									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
 									<table width="100%" cellpadding="0" cellspacing="0">
 										<tr>
 											<td width="20"></td>
-											<td class="content" align="center">
+											<td class="content large" align="center">
 												{sender} sent you a <b>${value}</b> gift.
 											</td>
 											<td width="20"></td>
@@ -310,33 +313,9 @@
 						</table>
 						<!--/ gift card header -->
 
-						<table width="100%" cellpadding="0" cellspacing="0">
-							<tr>
-								<td height="30"></td>
-							</tr>
-							<tr>
-								<td class="content" align="center">
-									
-									Use this code at checkout
-
-									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-
-									<a href="https://www.tradesy.com/coupon?id={code}" class="gift"><b>{code}</b></a>
-
-									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-
-									or click to redeem your code + get Tradesy Credit!
-
-								</td>
-							</tr>
-							<tr>
-								<td height="20"></td>
-							</tr>
-						</table>
-
 						<img src="http://wtf.jefff.co/tradesy-emails/gift-card/spacer.gif" width="100%" />
 
-						{if message}
+						<!-- {if message} -->
 						<table width="100%" cellspacing="0" cellpadding="0">
 							<tr>
 								<td align="center">
@@ -358,10 +337,42 @@
 						</table>
 
 						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-						{/if}
+						<table width="100%" style="margin:auto" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;" bgcolor="#cccccc">&nbsp;</td></tr></table>
+						<!-- <table width="100%" cellspacing="0" cellpadding="0"><tr><td height="35" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table> -->
+						<!-- {/if} -->
+
+						<table width="100%" cellpadding="0" cellspacing="0">
+							<tr>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td class="content" align="center">
+									
+									Use this code at checkout
+
+									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+									<b class="gift">{code}</b>
+
+									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+									or <a href="https://www.tradesy.com/coupon?id={code}">click to claim your ${amount} in Tradesy Credit now!</a>
+
+									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+									<span class="small">
+										Credit will be applied to your Tradesy account and you&rsquo;ll be able to use it towards your next purchase.
+									</span>
+
+								</td>
+							</tr>
+							<tr>
+								<td height="30"></td>
+							</tr>
+						</table>
 
 						<table width="100%" style="margin:auto" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;" bgcolor="#cccccc">&nbsp;</td></tr></table>
-						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="35" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
 						<table width="100%" cellspacing="0" cellpadding="0">
 							<tr>
@@ -371,11 +382,11 @@
 
 									<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-									Millions of new + pre-owned designer styles.
+									Resale is the new retail.
 
 									<br />
 
-									Gauranteed Authentic. Save up to 90%
+									Shop millions of new and pre-owned designer styles. Authenticity guaranteed.
 
 								</td>
 							</tr>
@@ -395,7 +406,7 @@
 											<tr>
 												<td class="middle" align="center">
 													 <a href="https://www.tradesy.com/trend/best-under-100/">
-														<img src="under-100.jpg" width="150" />
+														<img src="http://wtf.jefff.co/tradesy-emails/gift-card/under-100.jpg" width="220" alt="Best under $100" />
 													</a>
 												</td>
 											</tr>
@@ -424,7 +435,7 @@
 											<tr>
 												<td class="middle" align="center">
 													 <a href="https://www.tradesy.com/all/all/shop-by:louboutins-under-500/">
-														<img src="shoes.jpg" width="150" />
+														<img src="http://wtf.jefff.co/tradesy-emails/gift-card/shoes.jpg" width="220" alt="Louboutins under $500" />
 													</a>
 												</td>
 											</tr>
@@ -432,7 +443,7 @@
 										<span class="h3 title">
 											<a href="https://www.tradesy.com/all/all/shop-by:louboutins-under-500/">
 												<font face="'proxima-nova-semi', 'Helvetica Neue', Arial, sans-serif">
-													Louboutins &lt; $500
+													Louboutins under $500
 												</font>
 											</a>
 										</span>
@@ -452,16 +463,16 @@
 										<table width="100%" cellpadding="0" cellspacing="0">
 											<tr>
 												<td class="middle" align="center">
-													 <a href="https://www.tradesy.com/trend/the-birkin-collection/">
-														<img src="birkin.jpg" width="150" />
+													 <a href="https://www.tradesy.com/trend/best-bags-under-300/">
+														<img src="bags-under-300.jpg" width="220" alt="Bags Under $300" />
 													</a>
 												</td>
 											</tr>
 										</table>
 										<span class="h3 title">
-											<a href="https://www.tradesy.com/trend/the-birkin-collection/">
+											<a href="https://www.tradesy.com/trend/best-bags-under-300/">
 												<font face="'proxima-nova-semi', 'Helvetica Neue', Arial, sans-serif">
-													The Birkin Collection
+													Bags Under $300
 												</font>
 											</a>
 										</span>
@@ -482,7 +493,7 @@
 											<tr>
 												<td class="middle" align="center">
 													 <a href="https://www.tradesy.com/trend/the-neverfull-collection/">
-														<img src="neverfull.jpg" width="150" />
+														<img src="http://wtf.jefff.co/tradesy-emails/gift-card/neverfull.jpg" width="220" alt="The Neverfull Collection" />
 													</a>
 												</td>
 											</tr>
@@ -490,7 +501,7 @@
 										<span class="h3 title">
 											<a href="https://www.tradesy.com/trend/the-neverfull-collection/">
 												<font face="'proxima-nova-semi', 'Helvetica Neue', Arial, sans-serif">
-													The Neverfull collection
+													The Neverfull Collection
 												</font>
 											</a>
 										</span>
@@ -511,7 +522,7 @@
 											<tr>
 												<td class="middle" align="center">
 													 <a href="https://www.tradesy.com/trend/need-wallets/">
-														<img src="wallets.jpg" width="150" />
+														<img src="http://wtf.jefff.co/tradesy-emails/gift-card/wallets.jpg" width="220" alt="Need: Wallets" />
 													</a>
 												</td>
 											</tr>
@@ -540,7 +551,7 @@
 											<tr>
 												<td class="middle" align="center">
 													 <a href="https://www.tradesy.com/trend/the-boy-bag-collection/">
-														<img src="chanel.jpg" width="150" />
+														<img src="http://wtf.jefff.co/tradesy-emails/gift-card/chanel.jpg" width="220" alt="The Boy Bag Collection" />
 													</a>
 												</td>
 											</tr>
@@ -583,6 +594,14 @@
 						</table>
 
 						<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+						<table width="100%" cellspacing="0" cellpadding="0">
+							<tr>
+								<td align="center" class="content">
+									View Gift Card <a href="https://www.tradesy.com/gift-card-terms">Terms &amp; Conditions</a>
+								</td>
+							</tr>
+						</table>
 
 						<!-- footer // do not touch -->
 
