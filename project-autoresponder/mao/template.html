@@ -51,6 +51,9 @@
 		.lg {
 			font-size: 22px;
 		}
+		.g b {
+			color: #609c27;
+		}
 		del {
 			color: #999999;
 		}
@@ -101,6 +104,10 @@
 		.blk {
 			color: #111111;
 		}
+		.cancel {
+			color: #ee7873;
+			text-decoration : none;
+		}
 		.footer a {
 			color: #999999;
 		}
@@ -119,14 +126,20 @@
 			background: #111111;
 			height: 50px;
 			width: 200px;
+			border: 1px solid #111111;
+		}
+		.btn-col.l {
+			background : white;
+			border-color: #999999;
 		}
 		.btn-col a {
 			font-size: 17px;
 			font-weight: normal;
 			color: #ffffff;
 			text-decoration: none;
-			/*letter-spacing: 1.5px;
-			text-transform: uppercase;*/
+		}
+		.btn-col.l a {
+			color: #666666;
 		}
 		.center {
 			display: block;
@@ -292,16 +305,52 @@
 														<td class="content" align="left" valign="middle">Your Offer:</td>
 														<td class="content lg" align="right" valign="middle"><b>${your_offer}</b></td>
 													</tr>
+													<tr>
+														<td height="10"></td>
+														<td height="10"></td>
+													</tr>
+													<tr>
+														<td height="1" bgcolor="#dddddd"></td>
+														<td height="1" bgcolor="#dddddd"></td>
+													</tr>
+													<tr>
+														<td height="15"></td>
+														<td height="15"></td>
+													</tr>
+													<tr>
+														<td class="content" align="left" valign="middle">Seller said:</td>
+														<td class="content" align="right" valign="middle">Offer was too low</td>
+													</tr>
+													<tr>
+														<td height="10"></td>
+														<td height="10"></td>
+													</tr>
+													<tr>
+														<td height="1" bgcolor="#dddddd"></td>
+														<td height="1" bgcolor="#dddddd"></td>
+													</tr>
+													<tr>
+														<td height="15"></td>
+														<td height="15"></td>
+													</tr>
+													<tr>
+														<td class="content" align="left" valign="middle">Accept &amp; earn:</td>
+														<td class="content lg g" align="right" valign="middle"><b>${mo_money}</b></td>
+													</tr>
 												</table>
 												<!--\ item subdetails -->
 											</div>
 											<!--\ item -->
 
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+											The seller has until {date} {time} PST to accept your offer.
+
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="1" style="font-size: 1px; line-height: 1px;" bgcolor="#dddddd">&nbsp;</td></tr></table>
+											<a href="{cancel_offer}" class="cancel">Cancel Offer</a>
 
-											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
 											<table width="100%" cellspacing="0" cellpadding="0">
 												<tr>
@@ -309,6 +358,22 @@
 														<table cellspacing="0" cellpadding="0">
 															<tr>
 																<td class="btn-col content" align="center">
+																	<a href="{action_link}">{action_link_text}</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+											<table width="100%" cellspacing="0" cellpadding="0">
+												<tr>
+													<td class="btn-col-wrap" align="center">
+														<table cellspacing="0" cellpadding="0">
+															<tr>
+																<td class="btn-col l content" align="center">
 																	<a href="{action_link}">{action_link_text}</a>
 																</td>
 															</tr>
