@@ -122,23 +122,23 @@
 			color: #111111;
 			text-decoration: none;
 		}
-		.btn-col {
+		.btn-col, .btn-col-light {
 			background: #111111;
 			height: 50px;
 			width: 200px;
 			border: 1px solid #111111;
 		}
-		.btn-col.l {
+		.btn-col-light {
 			background : white;
 			border-color: #999999;
 		}
-		.btn-col a {
+		.btn-col a, .btn-col-light a {
 			font-size: 17px;
 			font-weight: normal;
 			color: #ffffff;
 			text-decoration: none;
 		}
-		.btn-col.l a {
+		.btn-col-light a {
 			color: #666666;
 		}
 		.center {
@@ -169,9 +169,9 @@
 			max-width: 120px;
 		}
 		@media screen and (max-width: 600px) {
-			.hide {
+			/*.hide {
 				display: none !important;
-			}
+			}*/
 			.full {
 				display: block !important;
 				width: 100% !important;
@@ -179,10 +179,10 @@
 			.slim {
 				width: 10px !important;
 			}
-			.h1.center, .content, .btn-col-wrap {
+			/*.h1.center, .content, .btn-col-wrap {
 				text-align: left !important;
 			}
-			.btn-col {
+			.btn-col, .btn-col-light {
 				text-align: center !important;
 			}
 			.item-img {
@@ -190,23 +190,17 @@
 			}
 			.item-details {
 				padding-left: 0 !important;
-			}
+			}*/
 		}
 		</style>
 	</head>
 	<body marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" offset="0">
-
-		<!-- customize Gmail / iOS content begin -->
-		<table width="100%" cellspacing="0" cellpadding="0"><tr><td style="font-size: 0; height: 0; display:none;"></td></tr></table>
-		<!-- customize Gmail / iOS content end -->
  
 		<!--[if (gte mso 9)|(IE)]><table width="600" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td width="600" align="center"><![endif]-->
 
-		<table style="margin:auto; max-width:600px;" id="wrapper" cellpadding="0" cellspacing="0">
+		<table style="margin:auto; max-width:500px;" id="wrapper" cellpadding="0" cellspacing="0">
 			<tr>
-				<td class="hide" width="20"></td>
 				<td>
-
 					<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
 						<tr>
 							<td height="20"></td>
@@ -245,7 +239,7 @@
 												<tr>
 													<td align="center" class="content">
 														<span class="h1">
-															{title}
+															You got an offer from {buyer_name}
 														</span>
 													</td>
 												</tr>
@@ -287,7 +281,7 @@
 												<table width="100%" cellspacing="0" cellpadding="0">
 													<tr>
 														<td class="content" align="left"><b>Offer Details</b></td>
-														<td class="content" align="right"><b>#: {offer_number}</b></td>
+														<td class="content" align="right"><b>#: {offer_id}</b></td>
 													</tr>
 													<tr>
 														<td height="10"></td>
@@ -302,10 +296,10 @@
 														<td height="15"></td>
 													</tr>
 													<tr>
-														<td class="content" align="left" valign="middle">Your Offer:</td>
-														<td class="content lg" align="right" valign="middle"><b>${your_offer}</b></td>
+														<td class="content" align="left" valign="middle">Offer Amount:</td>
+														<td class="content lg" align="right" valign="middle"><b>${offer_amount}</b></td>
 													</tr>
-													<tr>
+													<!-- <tr>
 														<td height="10"></td>
 														<td height="10"></td>
 													</tr>
@@ -320,7 +314,7 @@
 													<tr>
 														<td class="content" align="left" valign="middle">Seller said:</td>
 														<td class="content" align="right" valign="middle">Offer was too low</td>
-													</tr>
+													</tr> -->
 													<tr>
 														<td height="10"></td>
 														<td height="10"></td>
@@ -335,7 +329,7 @@
 													</tr>
 													<tr>
 														<td class="content" align="left" valign="middle">Accept &amp; earn:</td>
-														<td class="content lg g" align="right" valign="middle"><b>${mo_money}</b></td>
+														<td class="content lg g" align="right" valign="middle"><b>${earnings}</b></td>
 													</tr>
 												</table>
 												<!--\ item subdetails -->
@@ -344,7 +338,7 @@
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											The seller has until {date} {time} PST to accept your offer.
+											Accept this offer before it <b>expires {date} {time} PST.</b>
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
@@ -358,7 +352,7 @@
 														<table cellspacing="0" cellpadding="0">
 															<tr>
 																<td class="btn-col content" align="center">
-																	<a href="{action_link}">{action_link_text}</a>
+																	<a href="{action_link}">Accept Offer</a>
 																</td>
 															</tr>
 														</table>
@@ -373,8 +367,8 @@
 													<td class="btn-col-wrap" align="center">
 														<table cellspacing="0" cellpadding="0">
 															<tr>
-																<td class="btn-col l content" align="center">
-																	<a href="{action_link}">{action_link_text}</a>
+																<td class="btn-col-light content" align="center">
+																	<a href="{action_link}">Decline Offer</a>
 																</td>
 															</tr>
 														</table>
@@ -417,11 +411,11 @@
 								<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
 								<a href="http://itunes.apple.com/us/app/tradesy-for-sellers/id569706824?mt=8" class="apps">
-									<img src="https://item1.tradesy.com/m/4d667950b9ff2e5764b5accd36976b570a30d16cabf839e8bb233187816a4c38/tradesy/appstore.jpg" alt="Download on the App Store" />
+									<img src="https://item1.tradesy.com/m/4d667950b9ff2e5764b5accd36976b570a30d16cabf839e8bb233187816a4c38/tradesy/appstore.jpg" alt="Download on the App Store" width="100" />
 								</a>
 								&nbsp;&nbsp;
 								<a href="https://play.google.com/store/apps/details?id=com.tradesy.android" class="apps">
-									<img src="https://item1.tradesy.com/m/855937b212d469756a51dd99e4e3d6caabd3110a1690a709fffed63322cd7bef/tradesy/google-play.jpg" alt="Get it on Google Play" />
+									<img src="https://item1.tradesy.com/m/855937b212d469756a51dd99e4e3d6caabd3110a1690a709fffed63322cd7bef/tradesy/google-play.jpg" alt="Get it on Google Play" width="100" />
 								</a>
 
 								<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
@@ -449,12 +443,6 @@
 					</table>
 
 				</td>
-				<td class="hide pad"></td>
-			</tr>
-			<tr>
-				<td class="hide pad pad-h"></td>
-				<td class="hide pad-h"></td>
-				<td class="hide pad pad-h"></td>
 			</tr>
 		</table>
 
