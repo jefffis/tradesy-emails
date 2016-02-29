@@ -81,9 +81,9 @@
 		}
 		.h2 {
 			font-size: 17px;
-			letter-spacing: 1.5px;
+			/*letter-spacing: 1.5px;*/
 			text-align: center;
-			text-transform: uppercase;
+			/*text-transform: uppercase;*/
 		}
 		.h3 {
 			color: #777777;
@@ -155,29 +155,63 @@
 			display: block;
 			text-align: center;
 		}
-		.item img {
-			max-height: 120px;
-			max-width: 90%;
-			margin: 0;
-		}
-		.item-wrapper {
+		.items {
 			max-width: 450px;
 			margin: auto;
 		}
-		.item-img {
+		.max-width {
+			max-width: 300px;
+			margin: auto;
+		}
+		.item img {
+			max-height: 200px;
+			max-width: 200px;
+			margin: 0;
+		}
+		.item a {
+			text-decoration: none;
+		}
+		.title {
+			
+		}
+		.price {
+			font-weight: normal;
+		}
+		/*.item-img {
 			min-width: 100px;
 			width: 20%;			
 		}
 		.item-details {
 			padding-left: 10px;
 			color: #111111;
-		}
+		}*/
 		.apps a {
 			text-decoration: none;
 		}
 		.apps img {
 			display: inline;
 			max-width: 120px;
+		}
+		.profile {
+			overflow: hidden;
+			border-radius: 100%;
+		}
+		.initials {
+			border-radius: 0;
+		}
+		.initials span {
+			display: block;
+			height: 36px;
+			width: 50px;
+			padding-top : 14px;
+			border-radius: 100%;
+			border: 2px solid #111111;
+			color: #111111;
+			font-size : 20px;
+			font-weight: bold;
+			letter-spacing: 1px;
+			line-height: 21px;
+			text-indent: 1px
 		}
 		</style>
 	</head>
@@ -221,97 +255,37 @@
 								<table width="100%" cellpadding="0" cellspacing="0">
 									<tr>
 										<td class="content" align="center">
+
+											<table width="100%" cellpadding="0" cellspacing="0">
+												<tr>
+													<td align="center" width="50">
+														<table width="50" cellpadding="0" cellspacing="0">
+															<tr>
+																<td align="center" width="50" height="50" class="content profile initials">
+																	<!-- <img src="https://item1.tradesy.com/r/aa85a98aca2989a702eece13382e84fc3d1b5296cdb97ddf7abc749b58633a83/200/200/user/profile.jpg" width="50" /> -->
+																	<span>JD</span>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 											
 											<table width="100%" cellpadding="0" cellspacing="0">
 												<tr>
 													<td align="center" class="content">
 														<span class="h1">
-															You got an offer from {buyer_name}
+															{seller_name} is back!
 														</span>
 													</td>
 												</tr>
 											</table>
 
-											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											{body_copy_here}
-
-											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-
-											<!-- item -->
-											<div class="item-wrapper">
-												<table class="item" width="100%" cellspacing="0" cellpadding="0">
-													<tr>														
-														<!-- item img -->
-														<td align="left" class="item-img" valign="middle">
-															<a href="{item_url}"><img src="{image_url}" alt="{item_name}" /></a>
-														</td>
-														<!--\ item img -->
-
-														<!-- item details -->
-														<td align="left" class="content item-details" valign="middle">
-															{item_name}
-															<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-															List Price:
-															&nbsp;&nbsp;&nbsp;
-															<b>${item_price}</b>
-														</td>
-														<!--\ item details -->
-													</tr>
-												</table>
-											
-												<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-
-												<!-- item subdetails -->
-												<table width="100%" cellspacing="0" cellpadding="0">
-													<tr>
-														<td class="content" align="left"><b>Offer Details</b></td>
-														<td class="content" align="right"><b>#: {offer_id}</b></td>
-													</tr>
-													<tr>
-														<td height="10"></td>
-														<td height="10"></td>
-													</tr>
-													<tr>
-														<td height="1" bgcolor="#dddddd"></td>
-														<td height="1" bgcolor="#dddddd"></td>
-													</tr>
-													<tr>
-														<td height="15"></td>
-														<td height="15"></td>
-													</tr>
-													<tr>
-														<td class="content" align="left" valign="middle">Offer Amount:</td>
-														<td class="content lg" align="right" valign="middle"><b>${offer_amount}</b></td>
-													</tr>
-													<tr>
-														<td height="10"></td>
-														<td height="10"></td>
-													</tr>
-													<tr>
-														<td height="1" bgcolor="#dddddd"></td>
-														<td height="1" bgcolor="#dddddd"></td>
-													</tr>
-													<tr>
-														<td height="15"></td>
-														<td height="15"></td>
-													</tr>
-													<tr>
-														<td class="content" align="left" valign="middle">Accept &amp; Earn:</td>
-														<td class="content lg g" align="right" valign="middle"><b>${earnings}</b></td>
-													</tr>
-												</table>
-												<!--\ item subdetails -->
-											</div>
-											<!--\ item -->
-
-											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-
-											Accept this offer before it <b>expires {date} {time} PST.</b>
-
-											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
-
-											<a href="{cancel_offer}" class="cancel">Cancel Offer</a>
+											We just wanted to let you they&rsquo;re back from Vacation Mode.
 
 											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
@@ -321,7 +295,7 @@
 														<table cellspacing="0" cellpadding="0">
 															<tr>
 																<td class="btn-col content" align="center">
-																	<a href="{action_link}">Accept Offer</a>
+																	<a href="{action_link}">Shop their Closet</a>
 																</td>
 															</tr>
 														</table>
@@ -329,23 +303,82 @@
 												</tr>
 											</table>
 
-											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-											<table width="100%" cellspacing="0" cellpadding="0">
-												<tr>
-													<td class="btn-col-wrap" align="center">
-														<table cellspacing="0" cellpadding="0">
-															<tr>
-																<td class="btn-col-light content" align="center">
-																	<a href="{action_link}">Decline Offer</a>
-																</td>
-															</tr>
-														</table>
-													</td>
-												</tr>
-											</table>
+											<span class="h2">Featured Item&rsquo;s:</span>
 
-											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+											<!-- item -->
+											<div class="items">
+												<table class="item" width="100%" cellspacing="0" cellpadding="0">
+													
+													<tr>														
+														<!-- item img -->
+														<td class="item" align="center" valign="middle">
+															
+															<a href="{item_url}"><img src="https://item1.tradesy.com/images/balmain-x-h-and-m-black-and-red-fur-coat-9523630-0-3.jpg?width=350&height=350" alt="{item_name}" /></a>
+
+															<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+															<a href="{item_url}" class="title">{item_brand}</a>
+															<br />
+															<a href="{item_url}" class="price">${item_price}</a>
+
+														</td>
+														<!--\ item img -->
+													</tr>
+
+													<tr>
+														<td height="20"></td>
+													</tr>
+
+													<tr>
+														<td>
+															<table width="100%" class="max-width" cellspacing="0" cellpadding="0"><tr><td height="1" bgcolor="#dddddd" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+														</td>
+													</tr>
+
+													<tr>
+														<td height="20"></td>
+													</tr>
+
+													<tr>														
+														<!-- item img -->
+														<td class="item" align="center" valign="middle">
+															
+															<a href="{item_url}"><img src="https://item1.tradesy.com/images/balmain-x-h-and-m-black-and-red-fur-coat-9523630-0-3.jpg?width=350&height=350" alt="{item_name}" /></a>
+
+															<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+															<a href="{item_url}" class="title">{item_brand}</a>
+															<br />
+															<a href="{item_url}" class="price">${item_price}</a>
+
+														</td>
+														<!--\ item img -->
+													</tr>
+
+													<tr>
+														<td height="20"></td>
+													</tr>
+
+													<tr>
+														<td>
+															<table width="100%" class="max-width" cellspacing="0" cellpadding="0"><tr><td height="1" bgcolor="#dddddd" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+														</td>
+													</tr>
+
+													<tr>
+														<td height="20"></td>
+													</tr>
+
+												</table>
+											</div>
+
+											Browse {seller_name}&rsquo;s <a href="##">closet</a> now.
+
+											<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
 										</td>
 									</tr>
